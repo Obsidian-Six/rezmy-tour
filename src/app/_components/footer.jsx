@@ -59,13 +59,13 @@ const Footer = () => {
                     <Link className='hover:text-primary-main transition-transform' href="/">Home</Link>
                   </li>
                   <li>
-                    <Link className='hover:text-primary-main transition-transform' href="/packages">Packages</Link>
+                    <Link className='hover:text-primary-main transition-transform' href="/#">Packages</Link>
                   </li>
                   <li>
-                    <Link className='hover:text-primary-main transition-transform' href="/about-us">About Us</Link>
+                    <Link className='hover:text-primary-main transition-transform' href="/#">About Us</Link>
                   </li>
                   <li>
-                    <Link className='hover:text-primary-main transition-transform' href="/contact-us">Contact Us</Link>
+                    <Link className='hover:text-primary-main transition-transform' href="/#">Contact Us</Link>
                   </li>
                 </ul>
               </div>

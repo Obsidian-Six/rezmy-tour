@@ -19,8 +19,8 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Tour and Travel",
-  description: "Suhana Tours and Travel",
+  title: "Create next app",
+  description: "",
 };
 
 export default function RootLayoutFor({ children }) {
