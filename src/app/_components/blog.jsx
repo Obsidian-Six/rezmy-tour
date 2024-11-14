@@ -1,9 +1,39 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 export default function Blog() {
-    const arr = ["","",""]
+       
+  const blogData = [
+    {
+      id: 1,
+      title: "Exploring the Wonders of Dubai",
+      category: "Dubai Travel Guide",
+      description: "Discover the iconic landmarks, luxurious resorts, and adventure-filled activities that make Dubai a top tourist destination.",
+      image:"/assets/images/07.jpg",
+      link: "/blog/exploring-dubai",
+      date: "2024-11-15"
+    },
+    {
+      id: 2,
+      title: "Top 5 Things to Do in Dubai",
+      category: "Dubai Adventure",
+      description: "From skydiving over the Palm Jumeirah to visiting the Burj Khalifa, check out the top 5 thrilling activities you can't miss in Dubai.",
+      image:"/assets/images/07.jpg",
+      link: "/blog/top-5-things-to-do-in-dubai",
+      date: "2024-11-10"
+    },
+    {
+      id: 3,
+      title: "A Guide to Dubai's Luxury Shopping",
+      category: "Dubai Shopping",
+      description: "Explore the world’s most luxurious shopping destinations, from the Dubai Mall to the Mall of the Emirates, and everything in between.",
+      image:"/assets/images/07.jpg",
+      link: "/blog/guide-to-luxury-shopping-in-dubai",
+      date: "2024-11-05"
+    }
+  ];
   return (
     <div className='max-w-6xl mx-auto'>
         <div className="md:mt-10 max-md:mt-5 flex md:justify-between max-md:justify-center items-center">
@@ -11,38 +41,34 @@ export default function Blog() {
           Our Blogs
         </h2>       
       </div>
-        <div className="sm:grid lg:grid-cols-3 sm:grid-cols-2 gap-10 mt-4">
-            {
-                arr.map((ele,i) => (
-                    <div key={i} className="transition duration-300 max-w-sm rounded overflow-hidden shadow-[0px_8px_16px_0px_rgba(0,0,0,0.16)]">
-                    <div className="py-4 px-8">
-                        <a href="#">
-                        <h4 className="text-lg mb-3 font-semibold">
-                            How to be effective at working remotely?
-                        </h4>
-                        </a>
-                        <p className="mb-2 text-sm text-gray-600">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry. Lorem Ipsum has been the industrys standard dummy text ever
-                        since the 1500s
-                        </p>
-                        <img
-                        src="https://images.pexels.com/photos/461077/pexels-photo-461077.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                        alt='No Preview'
-                        className="w-100"
-                        />
-                        <hr className="mt-4" />
-                        <span className="text-xs">ARTICLE</span>
-                        &nbsp;<span className="text-xs text-gray-500">PROCESS</span>
-                    </div>
-                    </div>
+      <ul className="grid grid-cols-1 xl:grid-cols-3 gap-y-10 gap-x-6 items-start my-6 max-w-6xl mx-auto">
+        {blogData.map((blog) => (
+        <li key={blog.id} className="relative flex flex-col sm:flex-row xl:flex-col items-start">
+          <div className="order-1 sm:ml-6 xl:ml-0">
+            <h3 className="mb-1 text-heading-main font-semibold text-lg">
+              <span className={`mb-1 block text-sm leading-6 ${blog.categoryColor}`}>
+                {blog.category}
+              </span>
+              {blog.title}
+            </h3>
+            <p className="text-secondary-main text-base mt-2">{blog.description}</p>
+          </div>
+          <div className='relative mb-6 shadow-md rounded-lg overflow-hidden bg-secondary-main/10 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full h-44'>
+            <Image
+                className="object-cover h-full w-full"
+                fill
+                src={blog.image}
+                alt={blog.title}
+            />
 
-                ))
-            }
-        </div>
+          </div>
+        </li>
+      ))}
+            
+        </ul>
         <div className="flex justify-center">
         <Link
-          href={'#'}
+          href={'/blogs'}
             className="inline-block rounded text-primary-main md:text-base sm:text-sm text-xs font-medium md:leading-normal bg-white border-primary-main border-2 hover:shadow-md hover:bg-primary-main hover:text-white w-fit md:px-10 max-md:px-5 md:mt-6 p-2 max-md:mt-2"
           >
             View More

@@ -13,35 +13,33 @@ const HomePackage = () => {
   const handleOpen = () => (
     dispatch(openModal())
   )
-    const arr = [
-      {
-        img:'/assets/images/02.png',
-        pack:'Standard Desert Safari',
-        det:'3N/2D stay in Budget Non Ac room',
-        location:'Burj Khalifa At the top',
-        name:'',
-        day:'5',
-        price:'10,000'
-      },
-      {
-        img:'/assets/images/02.png',
-        pack:'Premium Desert Safari',
-        det:'3N/2D stay in AC room ',
-        location:'Ocean Empress Dinner Cruise',
-        name:'',
-        day:'7',
-        price:'13,000'
-      },
-      {
-        img:'/assets/images/02.png',
-        pack:'Yacht Special Tour',
-        det:'3N/2D Deluxe stay in Executive room',
-        location:'Museum of the Future',
-        name:'',
-        day:'4',
-        price:'26,500'
-      },
-    ]
+  const arr = [
+    {
+      img: '/assets/images/02.png',
+      packageName: 'Standard Desert Safari',
+      details: '3N/2D stay in a Budget Non-AC room with thrilling dune bashing, camel rides, and traditional performances.',
+      location: 'Desert Dunes, Tanoura Dance Show',
+      day: '5 Days',
+      price: '10,000 AED',
+    },
+    {
+      img: '/assets/images/02.png',
+      packageName: 'Premium Desert Safari',
+      details: '3N/2D stay in an AC room with premium dinner service, exclusive desert adventures, and live entertainment.',
+      location: ' Desert Safari, Sandboarding',
+      day: '7 Days',
+      price: '13,000 AED',
+    },
+    {
+      img: '/assets/images/02.png',
+      packageName: 'Yacht Special Tour',
+      details: '3N/2D Deluxe stay in an Executive room with luxury yacht tours and top Dubai attractions.',
+      location: ' Marina Yacht Ride, Palm Jumeirah',
+      day: '4 Days',
+      price: '26,500 AED',
+    },
+  ];
+  
   return (
     <div className="max-w-6xl mx-auto xl:p-0 md:p-6 max-md:px-6">
       <div className="md:mt-10 max-md:mt-5 flex md:justify-between max-md:justify-center items-center">
@@ -64,9 +62,9 @@ const HomePackage = () => {
                       <span className="md:text-[16px] max-md:text-[12px]"> {ele.location}</span>
                     </div>
                     <h2 className="md:text-lg sm:text-base text-sm font-semibold mb-2">
-                    {ele.pack}
+                    {ele.packageName}
                     </h2>
-                    <div className="text-gray-500 md:mb-4 max-md:mb-2 sm:text-base text-sm"> {ele.det}</div>
+                    <div className="text-gray-500 md:mb-4 max-md:mb-2 sm:text-base text-sm"> {ele.details}</div>
                     <div className="flex items-start lg:col-span-1 md:pt-1 mb-4">
                         <p className="mt-2 md:text-lg max-md:text-md leading-5 text-primary-main font-ttnorms text-left ">
                         <span className="md:text-[24px] max-md:text-[20px] font-700">{ele.price} /</span> Total package cost

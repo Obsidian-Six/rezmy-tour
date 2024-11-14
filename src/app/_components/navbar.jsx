@@ -3,12 +3,14 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
 import { usePathname } from 'next/navigation';
-import React from 'react'
+import React, { useState } from 'react'
 import { IoMenu, IoMenuSharp } from "react-icons/io5";
-import PhoneNavbarDrawer from './phone-navbar';
+import { RxCross1 } from 'react-icons/rx';
 
 const Navbar = () => {
   const path = usePathname();
+  const [isDrawer , setIsDrawer] = useState(false)
+  
   const arr = [
     {
         name: 'Home',
@@ -16,7 +18,7 @@ const Navbar = () => {
     },
     {
         name: 'Packages',
-        link: '/package'
+        link: '/packages'
     },
     {
         name: 'Gallery',
@@ -24,19 +26,20 @@ const Navbar = () => {
     },
     {
         name: 'Blog',
-        link: '/blog'
+        link: '/blogs'
     },
     {
         name: 'About Us',
-        link: '/about'
+        link: '/about-us'
     },
     {
         name: 'Contact Us',
-        link: '/contact'
+        link: '/contact-us'
     }
 ];
 
   return (
+    <>
     <nav className="bg-white border-gray-200 py-4 ">
     <div className="flex items-center justify-between max-w-screen-xl px-4 mx-auto">
       <Link href='/' className="flex items-center">
@@ -57,7 +60,7 @@ const Navbar = () => {
       </div>
       <div className="hidden max-lg:inline">
           
-          <IoMenu className="text-xl" />
+          <IoMenu className="text-xl" onClick={() => setIsDrawer(true)} />
       </div>
       </div>
   
@@ -75,7 +78,59 @@ const Navbar = () => {
           }
         </ul>
     </div>
+
   </nav>
+  <div>
+    
+  </div>
+  <div
+  className={`fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform hidden max-lg:inline ${
+    isDrawer ? "translate-x-0" : "translate-x-full"
+  } w-64 dark:bg-secondary-main`}
+>
+  <button
+    type="button"
+    onClick={() => setIsDrawer(false)}
+    className=""
+  >
+    <RxCross1 className="text-white text-xl" />
+    <span className="sr-only">Close menu</span>
+  </button>
+  <div className="py-4 overflow-y-auto">
+    
+  <h5
+    id="drawer-navigation-label"
+    className="text-base font-semibold text-white uppercase dark:text-white"
+  >
+    <div className="flex items-center space-x-3 rtl:space-x-reverse">
+      <img
+        src="https://bemyguestimagesnew.s3.ap-south-1.amazonaws.com/images/2024-09-01T05-26-57.600Z96.26911790648147.png"
+        className="h-6"
+        alt="Logo"
+      />
+    </div>
+  </h5>
+    <ul className="space-y-2 font-medium">
+      {arr.map((ele, i) => (
+        <li key={i}>
+          <Link
+            href={ele.link}
+            className={`flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-orange-100 dark:hover:bg-primary-main group cursor-pointer ${
+              path === ele.path
+                ? "bg-primary-main font-medium"
+                : "text-heading-main"
+            }`}
+            onClick={() => setIsDrawer(false)}
+          >
+            <span className="ms-3">{ele.name}</span>
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
+
+    </>
 
   )
 }

@@ -12,56 +12,59 @@ const Packages = () => {
   const handleOpen = () => dispatch(openModal());
   const pack = [
     {
-      img: "/assets/images/02.png",
-      name: "Couple Friendly Budget package By  Suhana Tours and Travels For 2 pax",
-      price: "10,000",
-      section:'couple',
-      data: [
-        "Pick Up from Pipariya to Pachmarhi",
-        "Drop from Pachmarhi to Pipariya",
-        "3N/2D stay in Budget Non AC room",
-        "Sightseeing-non entry/forest entry ",
+      img: "/assets/images/07.jpg",
+      name: "Couple-Friendly Budget Package by Dubai Dreams Tours for 2 Pax",
+      price: "10,000 AED",
+      section: "couple",
+      location: 'Desert Dunes, Tanoura Dance Show',
+      details: [
+        "Pick-up and drop-off service from Dubai International Airport",
+        "3N/2D stay in a budget-friendly hotel in Deira",
+        "Burj Khalifa At The Top ticket (non-prime hours)",
+        "Dubai Mall sightseeing and Fountain Show experience",
       ],
     },
     {
-      img: "/assets/images/02.png",
-      name: "Couple Friendly Standard package By Suhana Tours and Travels For 2 pax",
-      price: "13,000",
-      section:'couplestandard',
-      data: [
-        "Pick Up from Pipariya to Pachmarhi",
-        "Drop from Pachmarhi to Pipariya",
-        "3N/2D stay in AC room",
-        "Sightseeing-non entry/forest entry",
+      img: "/assets/images/07.jpg",
+      name: "Couple-Friendly Standard Package by Dubai Dreams Tours for 2 Pax",
+      price: "13,000 AED",
+      section: "coupleStandard",
+      location: 'Desert Dunes, Tanoura Dance Show',
+      details: [
+        "Pick-up and drop-off service from Dubai International Airport",
+        "3N/2D stay in a 4-star hotel in Downtown Dubai",
+        "Burj Khalifa At The Top ticket (prime hours)",
+        "Desert safari with BBQ dinner and traditional entertainment",
       ],
     },
     {
-      img: "/assets/images/02.png",
-      name: "Family package By Suhana Tours and Travels For 4 pax",
-      price: "26,500",
-      section:'family',
-      data: [
-        "Pick Up from Pipariya to Pachmarhi",
-        "Drop from Pachmarhi to Pipariya",
-        "3N/2D Deluxe stay in Executive rooms",
-        "Sightseeing-non entry/forest entry",
-        "Jungle safari core/buffer zone ",
+      img: "/assets/images/07.jpg",
+      name: "Family Package by Dubai Dreams Tours for 4 Pax",
+      price: "26,500 AED",
+      section: "family",
+      location: 'Desert Dunes, Tanoura Dance Show',
+      details: [
+        "Pick-up and drop-off service from Dubai International Airport",
+        "3N/2D deluxe stay in a family suite at a 5-star hotel",
+        "Dubai Marina dhow cruise with buffet dinner",
+        "Desert safari and Dubai Frame tickets for all members",
       ],
     },
     {
-      img: "/assets/images/02.png",
-      name: "Family package Standard By Suhana Tours and Travels For 4 pax ",
-      price: "46,200",
-      section:'familystandard',
-      data: [
-        "Pick Up from Pipariya to Pachmarhi",
-        "Drop from Pachmarhi to Pipariya",
-        "3N/2D stay luxury Resort rooms.",
-        "Sightseeing-non entry/forest entry",
-        "Jungle safari core/buffer zone",
+      img: "/assets/images/07.jpg",
+      name: "Family Package Standard by Dubai Dreams Tours for 4 Pax",
+      price: "46,200 AED",
+      section: "familyStandard",
+      location: 'Desert Dunes, Tanoura Dance Show',
+      details: [
+        "Pick-up and drop-off service from Dubai International Airport",
+        "3N/2D stay in a luxury resort at Palm Jumeirah",
+        "Exclusive yacht tour with onboard dinner",
+        "Desert safari with private guide and premium seating",
       ],
     },
   ];
+  
   return (
     <div className="max-w-6xl mx-auto md:space-y-16 max-md:space-y-4 md:my-10 max-md:my-8">
       {pack.map((ele, i) => (
@@ -81,7 +84,7 @@ const Packages = () => {
             <div className="flex items-center text-primary-main my-2">
               <FaLocationDot className="mr-2 md:text-[20px] max-md:text-[10px]"></FaLocationDot>
               <span className="md:text-[16px] max-md:text-[12px]">
-                Pachmarhi
+                {ele.location}
               </span>
             </div>
             <h3 className="md:text-xl max-md:text-md text-left leading-8 font-bold text-black sm:text-2xl sm:leading-9 max-md:leading-5 dark:text-black">
@@ -89,7 +92,7 @@ const Packages = () => {
             </h3>
             <div className="md:mt-4 max-md:mt-2">
               <ul className="pl-0 lg:grid lg:gap-y-4 max-md:gap-y-2 md:space-y-5 lg:space-y-0 max-md:space-y-2">
-                {ele.data.map((dat, j) => (
+                {ele.details.map((dat, j) => (
                   <li key={j} className="flex items-start lg:col-span-1">
                     <p className="md:text-lg max-md:text-sm leading-5 text-black font-ttnorms text-left ">
                       {dat}
@@ -112,14 +115,14 @@ const Packages = () => {
                 >
                   Book Package
                 </button>
-                <div className="rounded-md shadow">
+                {/* <div className="rounded-md shadow">
                   <Link
                     href="tel:+919425639221"
                     className="flex items-center justify-center md:px-5 max-md:px-3 md:py-3 max-md:py-2  leading-6 font-medium rounded-md focus:outline-none focus:ring transition duration-200 ease-in-out shadow-teal border-2 border-primary-main bg-white text-primary-main  md:text-md max-md:text-sm relative dark:text-primary-main"
                   >
                     Call Now
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

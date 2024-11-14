@@ -20,31 +20,32 @@ import Image from "next/image";
 export default function HeroSection() {
   const rev = [
     {
-      name:'Raj Verma',
-      img:'',
-      data:'Wonderful experience with Tour & Travels! The Pachmarhi trip was well-planned. Perfect for a peaceful and scenic holiday.'
+      name: 'Zayed Al-Fahim',
+      img: '',
+      data: 'Incredible Dubai experience with Rezmytour! Everything was so well-organized, from the desert safari to the Burj Khalifa visit. Highly recommended for anyone visiting Dubai.'
     },
     {
-      name:'Anjali Tiwari',
-      img:'',
-      data:'Amazing Pachmarhi tour! The itinerary covered all the must-see spots. A truly hassle-free and delightful experience!'
+      name: 'Ayesha Al-Nahyan',
+      img: '',
+      data: 'Rezmytour made our Dubai trip unforgettable! The itinerary covered all the iconic landmarks, and the service was exceptional. Will definitely book again!'
     },
     {
-      name:'Ravi Gupta',
-      img:'',
-      data:'A memorable Pachmarhi trip! Tour and Travels handled everything perfectly, from transportation to accommodation. Highly professional and friendly service.'
+      name: 'Omar Al-Maktoum',
+      img: '',
+      data: 'Amazing trip to Dubai with Rezmytour! From luxury shopping to thrilling desert adventures, every detail was taken care of. Outstanding service and professionalism!'
     },
     {
-      name:'Pooja Sharma',
-      img:'',
-      data:'Fantastic experience with Tour and Travels! Well-organized, beautiful sights, and excellent service throughout. Highly recommended for a relaxing Pachmarhi getaway!'
+      name: 'Leila Al-Shehhi',
+      img: '',
+      data: 'Rezmytour provided us with a seamless and delightful Dubai tour experience. The Palm Jumeirah views and the Dubai Fountain show were breathtaking!'
     },
     {
-      name:'Sandeep Kumar',
-      img:'',
-      data:'Great tour! made the Pachmarhi trip smooth and enjoyable. Loved the scenic spots. Will definitely book with them again.'
+      name: 'Faisal Al-Qasimi',
+      img: '',
+      data: 'Fantastic Dubai vacation thanks to Rezmytour! Loved the combination of luxury and adventure, especially the Dubai Marina cruise. Can’t wait to book my next trip!'
     },
-  ]
+  ];
+  
   return (
      <div id="review" className="relative w-full h-full max-w-6xl mx-auto md:py-10 max-md:py-5 xl:px-10 px-6 bg-[#FEFCFB] rounded-md">
     <div className="grid md:grid-cols-2 grid-cols-1 w-full h-full">

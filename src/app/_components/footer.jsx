@@ -59,13 +59,13 @@ const Footer = () => {
                     <Link className='hover:text-primary-main transition-transform' href="/">Home</Link>
                   </li>
                   <li>
-                    <Link className='hover:text-primary-main transition-transform' href="/#">Packages</Link>
+                    <Link className='hover:text-primary-main transition-transform' href="/packages">Packages</Link>
                   </li>
                   <li>
-                    <Link className='hover:text-primary-main transition-transform' href="/#">About Us</Link>
+                    <Link className='hover:text-primary-main transition-transform' href="/about-us">About Us</Link>
                   </li>
                   <li>
-                    <Link className='hover:text-primary-main transition-transform' href="/#">Contact Us</Link>
+                    <Link className='hover:text-primary-main transition-transform' href="/contact-us">Contact Us</Link>
                   </li>
                 </ul>
               </div>
@@ -76,16 +76,16 @@ const Footer = () => {
               </h4>
               <div className="flex md:gap-6 max-md:gap-2  max-md:justify-center">
                 <ul className="text-gray-600 max-md:text-[14px] transition-all duration-500 grid md:gap-4 max-md:gap-2 text-base font-medium max-md:text-left">
-                  <Link className='hover:text-primary-main transition-transform' href={'#'}>
+                  <Link className='hover:text-primary-main transition-transform' href={'/gallery'}>
                     Gallery
                   </Link>
-                  <Link className='hover:text-primary-main transition-transform' href={'#'}>
+                  <Link className='hover:text-primary-main transition-transform' href={'/blogs'}>
                     Blog
                   </Link>
-                  <Link className='hover:text-primary-main transition-transform' href={'#'}>
+                  <Link className='hover:text-primary-main transition-transform' href={'/terms-and-condition'}>
                     Terms and Conditon
                   </Link>
-                  <Link className='hover:text-primary-main transition-transform' href={'#'}>
+                  <Link className='hover:text-primary-main transition-transform' href={'/privacy-policy'}>
                     Privacy Policy
                   </Link>
                 </ul>
@@ -109,7 +109,7 @@ const Footer = () => {
       <div className="py-4 bg-primary-main">
         <div className="flex items-center justify-center">
           <span className="text-sm text-white ">
-            Your Jorney Begin That why You are here
+            Your Jorney Begin That why You are here !
             {/* Copyright@2024 All Right Reserved by{" "} */}
             {/* <a href="/">Obsidian</a>  */}
           </span>

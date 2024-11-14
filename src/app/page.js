@@ -13,14 +13,7 @@ import { openModal } from "./redux/modelSlice/modelSlice";
 import Blog from "./_components/blog";
 
 export default function Home() {
-  const dispatch = useDispatch();
-
-  const handleOpen = () => (
-    dispatch(openModal())
-  )
-  setTimeout(()=> {
-    handleOpen();
-  },5000)
+  
   return (
     <div className={montserrat.className}>
      <HeroSection />
