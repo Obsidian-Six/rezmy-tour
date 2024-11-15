@@ -35,7 +35,7 @@ export default function Blog() {
     }
   ];
   return (
-    <div className='max-w-6xl mx-auto xl:px-0 px-6 my-6'>
+    <div className='max-w-6xl mx-auto xl:px-0 px-8 my-6'>
         <div className="md:mt-10 max-md:mt-5 flex md:justify-between max-md:justify-center items-center">
         <h2 className="md:text-3xl sm:text-2xl text-base max-md:text-center font-bold tracking-tight text-gray-900 dark:text-black">
           Our Blogs

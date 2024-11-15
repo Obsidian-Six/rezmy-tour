@@ -4,7 +4,7 @@ import React from "react";
 
 const PackageHero = ({ name, img, page }) => {
   return (
-    <div className="relative md:h-[30vw] max-md:h-[30vh]  text-white overflow-hidden">
+    <div className="relative md:h-[30vw] max-md:h-[95vh]  text-white overflow-hidden">
       <div className="absolute inset-0">
         <img
           src={img}

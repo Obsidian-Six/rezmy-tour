@@ -92,7 +92,7 @@ const Navbar = () => {
   <div
   className={`fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform hidden max-lg:inline ${
     isDrawer ? "translate-x-0" : "translate-x-full"
-  } w-64 dark:bg-secondary-main`}
+  } w-72 dark:bg-secondary-main`}
 >
   <button
     type="button"
@@ -116,9 +116,9 @@ const Navbar = () => {
       />
     </div>
   </h5>
-    <ul className="space-y-2 font-medium">
+    <ul className="space-y-4 font-medium mt-6">
       {arr.map((ele, i) => (
-        <li key={i}>
+        <li key={i} className='border-b-2'>
           <Link
             href={ele.link}
             className={`flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-orange-100 dark:hover:bg-primary-main group cursor-pointer ${
@@ -128,7 +128,7 @@ const Navbar = () => {
             }`}
             onClick={() => setIsDrawer(false)}
           >
-            <span className="ms-3">{ele.name}</span>
+         &#9673;  <span className="ms-3">{ele.name}</span>
           </Link>
         </li>
       ))}
