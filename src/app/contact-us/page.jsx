@@ -10,7 +10,7 @@ const page = () => {
     <div>
       <PackageHero
         name={"Contact Us"}
-        img={"/assets/images/about-images/13.jpg"}
+        img={"/assets/images/hero-section/08.jpg"}
         page={"Contact Us"}
       />
       <HomeContact />

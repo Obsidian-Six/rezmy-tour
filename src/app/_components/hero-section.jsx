@@ -19,7 +19,33 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 const HeroSection = () => {
   const dispatch = useDispatch();
   const handleOpen = () => dispatch(openModal());
-  const arr = ["","",""]
+  const arr = [
+    {
+        img: "/assets/images/01.png",
+        val1: "Your Journey Begins",
+        val2: "And that’s why you’re here!",
+        detail: "Explore breathtaking destinations, immerse yourself in diverse cultures, and create unforgettable memories with our carefully curated travel experiences."
+    },
+    {
+        img: "/assets/images/hero-section/01.png",
+        val1: "Discover Dubai",
+        val2: "A city of wonders awaits you.",
+        detail: "Uncover the charm of Dubai, a city where luxury meets tradition, offering stunning skyscrapers, thrilling adventures, and cultural treasures for every traveler."
+    },
+    {
+        img: "/assets/images/hero-section/03.png",
+        val1: "Experience Luxury",
+        val2: "Beyond your imagination.",
+        detail: "Indulge in the pinnacle of comfort with world-class accommodations, exquisite dining experiences, and bespoke services designed to make your stay truly special."
+    },
+    {
+        img: "/assets/images/hero-section/02.png",
+        val1: "Adventure Awaits",
+        val2: "Make memories that last forever.",
+        detail: "Embark on an adrenaline-filled journey with desert safaris, thrilling water sports, and unforgettable activities that bring the spirit of adventure to life."
+    }
+];
+
   return (
     <Swiper
       spaceBetween={30}
@@ -40,7 +66,7 @@ const HeroSection = () => {
         <SwiperSlide key={i} className="h-full w-full">
           <div className="absolute inset-0">
             <img
-              src="/assets/images/01.png"
+              src={ele.img}
               alt="Background Image"
               className="object-cover object-center w-full h-full"
             />
@@ -52,18 +78,16 @@ const HeroSection = () => {
               data-aos-duration="3000"
               className="lg:text-[3.41rem] md:text-4xl sm:text-3xl text-lg font-bold xl:leading-tight md:mb-10 sm:mb-6 drop-shadow-[0px_4px_4px_#666666]"
             >
-              Your Journey begin{" "}
+              {ele.val1}
               <span className="md:text-heading-main md: drop-shadow-[0px_4px_4px_#C6A669]"></span>
-              <span className="block">and that’s why you’re here!</span>
+              <span className="block">{ele.val2}</span>
             </div>
             <p
               data-aos="fade-up"
               data-aos-duration="3000"
               className="md:text-2xl sm:text-xl text-sm font-medium  md:mb-8  drop-shadow-[0px_4px_4px_#666666]"
             >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
-              dolor vel laboriosam enim voluptas, vitae eius? Ad consectetur hic
-              consequuntur?
+             {ele.detail}
             </p>
             <div>
               {/* <button

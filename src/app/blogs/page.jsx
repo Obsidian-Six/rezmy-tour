@@ -11,16 +11,16 @@ export default function page() {
           title: "Exploring the Wonders of Dubai",
           category: "Dubai Travel Guide",
           description: "Discover the iconic landmarks, luxurious resorts, and adventure-filled activities that make Dubai a top tourist destination.",
-          image: "/assets/images/07.jpg",
+          image:"/assets/images/blogs/01.jpg",
           link: "/blog/exploring-dubai",
           date: "2024-11-15"
         },
         {
           id: 2,
-          title: "Top 5 Things to Do in Dubai",
+          title: "Skydiving over the Palm",
           category: "Dubai Adventure",
           description: "From skydiving over the Palm Jumeirah to visiting the Burj Khalifa, check out the top 5 thrilling activities you can't miss in Dubai.",
-          image: "/assets/images/07.jpg",
+          image:"/assets/images/blogs/02.jpg",
           link: "/blog/top-5-things-to-do-in-dubai",
           date: "2024-11-10"
         },
@@ -29,7 +29,7 @@ export default function page() {
           title: "A Guide to Dubai's Luxury Shopping",
           category: "Dubai Shopping",
           description: "Explore the world’s most luxurious shopping destinations, from the Dubai Mall to the Mall of the Emirates, and everything in between.",
-          image: "/assets/images/07.jpg",
+          image:"/assets/images/07.jpg",
           link: "/blog/guide-to-luxury-shopping-in-dubai",
           date: "2024-11-05"
         },
@@ -93,7 +93,7 @@ export default function page() {
   return (
     <div>
         
-      <PackageHero name={"Blogs"} img={"/assets/images/about-images/12.jpg"} page={'blog'} />
+      <PackageHero name={"Blogs"} img={"/assets/images/hero-section/06.jpg"} page={'blog'} />
         <ul className="grid grid-cols-1 xl:grid-cols-3 gap-y-10 gap-x-6 items-start p-8 max-w-6xl mx-auto">
         {blogData.map((blog) => (
         <li key={blog.id} className="relative flex flex-col sm:flex-row xl:flex-col items-start">

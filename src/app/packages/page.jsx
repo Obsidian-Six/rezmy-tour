@@ -6,7 +6,7 @@ import PackageHero from '../_components/package-hero'
 const Pack = () => {
   return (
     <div>
-         <PackageHero name={"Packages"}  img={"/assets/images/05.png"} page={"Packages"} />
+         <PackageHero name={"Packages"}  img={"/assets/images/hero-section/04.jpg"} page={"Packages"} />
        <Packages />
 
     </div>

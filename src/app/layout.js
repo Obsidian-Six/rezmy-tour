@@ -31,8 +31,8 @@ export default function RootLayoutFor({ children }) {
       >
         <Providers>
         <Navbar />
-        {/* <FormPopup /> */}
-        {/* <Whatsapp /> */}
+        <FormPopup />
+        <Whatsapp />
         {children}
         <Footer />
         </Providers>

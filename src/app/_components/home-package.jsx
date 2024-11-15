@@ -23,7 +23,7 @@ const HomePackage = () => {
       price: '10,000 AED',
     },
     {
-      img: '/assets/images/02.png',
+      img: '/assets/images/08.png',
       packageName: 'Premium Desert Safari',
       details: '3N/2D stay in an AC room with premium dinner service, exclusive desert adventures, and live entertainment.',
       location: ' Desert Safari, Sandboarding',
@@ -31,7 +31,7 @@ const HomePackage = () => {
       price: '13,000 AED',
     },
     {
-      img: '/assets/images/02.png',
+      img: '/assets/images/hero-section/02.png',
       packageName: 'Yacht Special Tour',
       details: '3N/2D Deluxe stay in an Executive room with luxury yacht tours and top Dubai attractions.',
       location: ' Marina Yacht Ride, Palm Jumeirah',
@@ -54,7 +54,7 @@ const HomePackage = () => {
                 <img
                     alt="trees and mountains"
                     src={ele.img}
-                    className="rounded-lg w-full md:h-48 sm:h-36 h-28"
+                    className="rounded-lg w-full md:h-48 sm:h-36 h-28 object-cover"
                 />
                 <div className="">
                     <div className="flex items-center text-primary-main my-2">

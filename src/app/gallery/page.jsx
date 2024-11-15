@@ -6,7 +6,7 @@ export default function page() {
   return (
     <div>
       
-      <PackageHero name={"Gallery"} img={"/assets/images/about-images/12.jpg"} page={'gallery'} />
+      <PackageHero name={"Gallery"} img={"/assets/images/hero-section/05.jpg"} page={'gallery'} />
       <Gallery />
     </div>
   )

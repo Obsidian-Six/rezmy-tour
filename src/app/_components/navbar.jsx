@@ -6,11 +6,16 @@ import { usePathname } from 'next/navigation';
 import React, { useState } from 'react'
 import { IoMenu, IoMenuSharp } from "react-icons/io5";
 import { RxCross1 } from 'react-icons/rx';
+import { useDispatch } from 'react-redux';
+import { openModal } from '../redux/modelSlice/modelSlice';
 
 const Navbar = () => {
   const path = usePathname();
+  const dispatch = useDispatch();
   const [isDrawer , setIsDrawer] = useState(false)
-  
+  const handleOpen = () => {
+    dispatch(openModal())
+  }
   const arr = [
     {
         name: 'Home',
@@ -55,6 +60,7 @@ const Navbar = () => {
         <div
         className="bg-heading-main cursor-pointer text-primary-main hover:bg-heading-main py-2 px-4 rounded text-base font-bold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg lg:inline
          hidden"
+         onClick={handleOpen}
       >
        Book Now
       </div>

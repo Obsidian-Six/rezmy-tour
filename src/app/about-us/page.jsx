@@ -8,7 +8,7 @@ const AboutUs = () => {
  
   return (
     <div>
-      <PackageHero name={"About Us"} img={"/assets/images/12.jpg"} page={'About Us'} />
+      <PackageHero name={"About Us"} img={"/assets/images/hero-section/07.jpg"} page={'About Us'} />
       <AboutPageComp />
     </div>
   );

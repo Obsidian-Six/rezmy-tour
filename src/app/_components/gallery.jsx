@@ -6,18 +6,18 @@ import React, { useState } from 'react'
 
 export default function Gallery() {
     const images = [
+        '/assets/images/01.png',
+        '/assets/images/02.png',
+        '/assets/images/03.png',
+        '/assets/images/05.png',
+        '/assets/images/04.webp',
         '/assets/images/07.jpg',
-        '/assets/images/07.jpg',
-        '/assets/images/07.jpg',
-        '/assets/images/07.jpg',
-        '/assets/images/07.jpg',
-        '/assets/images/07.jpg',
-        '/assets/images/07.jpg',
-        '/assets/images/07.jpg',
-        '/assets/images/07.jpg',
-        '/assets/images/07.jpg',
-        '/assets/images/07.jpg',
-        '/assets/images/07.jpg',
+        '/assets/images/08.png',
+        '/assets/images/blogs/01.jpg',
+        '/assets/images/blogs/02.jpg',
+        '/assets/images/hero-section/02.png',
+        '/assets/images/hero-section/01.png',
+        '/assets/images/hero-section/03.png',
       ];
     
       const [photoIndex, setPhotoIndex] = useState(0);
@@ -39,16 +39,6 @@ export default function Gallery() {
       <div className='gallery md:h-[620px] h-96 py-6'>
         <div className='line1 h-[32%] flex md:gap-2 max-md:gap-1 md:py-1 max-md:py-[2px]'>
           {
-            images.slice(9,12).map((ele,i) => (
-            <div key={i} className="relative photo1 h-full group overflow-hidden  cursor-pointer w-[33%] "  onClick={() => {setPhotoIndex(i+9); setIsOpen(true)}}>
-              <Image fill className="group-hover:scale-105 transition-transform object-cover object-center w-full h-full" src={ele} alt="" />
-              <div className='absolute top-0 left-0 bg-black/40 h-full w-full flex justify-center items-center text-white '><span className='group-hover:inline hidden'> View</span></div>
-            </div>
-            ))
-          }
-        </div>
-        <div className='line1 h-[32%] flex md:gap-2 max-md:gap-1 md:py-1 max-md:py-[2px]'>
-          {
             images.slice(0,4).map((ele,i) => (
             <div key={i} className="relative photo1 h-full group overflow-hidden  cursor-pointer w-[25%] rounded-sm" onClick={() => {setPhotoIndex(i); setIsOpen(true)}}>
               <Image fill className="group-hover:scale-105 transition-transform object-cover object-center w-full h-full" src={ele} alt="" />
@@ -61,6 +51,16 @@ export default function Gallery() {
           {
             images.slice(4,9).map((ele,i) => (
             <div key={i} className="relative photo1 h-full group overflow-hidden  cursor-pointer w-[25%] rounded-sm "  onClick={() => {setPhotoIndex(i+4); setIsOpen(true)}}>
+              <Image fill className="group-hover:scale-105 transition-transform object-cover object-center w-full h-full" src={ele} alt="" />
+              <div className='absolute top-0 left-0 bg-black/40 h-full w-full flex justify-center items-center text-white '><span className='group-hover:inline hidden'> View</span></div>
+            </div>
+            ))
+          }
+        </div>
+        <div className='line1 h-[32%] flex md:gap-2 max-md:gap-1 md:py-1 max-md:py-[2px]'>
+          {
+            images.slice(9,12).map((ele,i) => (
+            <div key={i} className="relative photo1 h-full group overflow-hidden  cursor-pointer w-[33%] "  onClick={() => {setPhotoIndex(i+9); setIsOpen(true)}}>
               <Image fill className="group-hover:scale-105 transition-transform object-cover object-center w-full h-full" src={ele} alt="" />
               <div className='absolute top-0 left-0 bg-black/40 h-full w-full flex justify-center items-center text-white '><span className='group-hover:inline hidden'> View</span></div>
             </div>

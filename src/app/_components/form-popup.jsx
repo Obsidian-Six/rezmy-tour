@@ -84,21 +84,21 @@ export default function FormPopup() {
           id="contactFormModal"
           className="fixed z-20 inset-0 overflow-y-auto"
         >
-          <div className="flex items-center justify-center min-h-screen bg-black/80">
-            <div className="bg-green-50 w-full max-w-5xl rounded shadow-md ">
+          <div className="flex items-center justify-center min-h-screen bg-white/50  p-6">
+            <div className="bg-heading-main w-full max-w-5xl rounded shadow-md">
             <ToastContainer autoClose={3000} closeOnClick/>
               <div className="flex justify-end p-2">
                 {/* Close Button */}
                 <button
                   onClick={handleClose} // onClick event to close the modal
-                  className="text-gray-700 hover:text-red-500 text-xl"
+                  className="text-red-500 text-xl"
                 >
                   <RxCrossCircled />
                 </button>
               </div>
               <h2 className="text-3xl font-bold mb-4 text-primary-main px-4 text-center">Contact Us</h2>
               <form onSubmit={handleSubmit} className='grid md:grid-cols-2 gap-3 text-start  p-6'>
-                <div className="mb-4">
+                <div className="md:mb-4">
                   <label
                     htmlFor="name"
                     className="block text-primary-main text-sm font-bold mb-2"
@@ -112,11 +112,11 @@ export default function FormPopup() {
                     value={isData.name}
                     onChange={handleChange}
                     placeholder='Please Enter Your Name'
-                    className="w-full p-2 border rounded-md focus:outline-none text-black bg-white"
+                    className="w-full md:p-2 p-1 border rounded-md focus:outline-none text-black bg-white"
                     required
                   />
                 </div>
-                {/* <div className="mb-4">
+                {/* <div className="md:mb-4">
                   <label
                     htmlFor="email"
                     className="block text-primary-main text-sm font-bold mb-2"
@@ -130,11 +130,11 @@ export default function FormPopup() {
                     value={isData.email}
                     onChange={handleChange}
                     placeholder='Please Enter Your Email'
-                    className="w-full p-2 border rounded-md focus:outline-none text-black bg-white"
+                    className="w-full md:p-2 p-1 border rounded-md focus:outline-none text-black bg-white"
                     required
                   />
                 </div> */}
-                  <div className="mb-4">
+                  <div className="md:mb-4">
                   <label
                     htmlFor="tel"
                     className="block text-primary-main text-sm font-bold mb-2"
@@ -148,13 +148,13 @@ export default function FormPopup() {
                     value={isData.number}
                     onChange={handleChange}
                     placeholder='Please Enter Your Number'
-                    className="w-full p-2 border rounded-md focus:outline-none text-black bg-white"
+                    className="w-full md:p-2 p-1 border rounded-md focus:outline-none text-black bg-white"
                     required
                   />
                 </div>
                 <div className="grid md:grid-cols-2 md:col-span-2 gap-4">
               
-                  <div className="mb-4">
+                  <div className="md:mb-4">
                     <label
                       htmlFor="date"
                       className="block text-primary-main text-sm font-bold mb-2"
@@ -168,11 +168,11 @@ export default function FormPopup() {
                       value={isData.date}
                       onChange={handleChange}
                       placeholder='Please Enter Your Date'
-                      className="w-full p-2 border rounded-md focus:outline-none text-black bg-white"
+                      className="w-full md:p-2 p-1 border rounded-md focus:outline-none text-black bg-white"
                       required
                     />
                   </div>
-                  <div className="mb-4">
+                  <div className="md:mb-4">
                     <label
                       htmlFor="date"
                       className="block text-primary-main text-sm font-bold mb-2"
@@ -186,12 +186,12 @@ export default function FormPopup() {
                       value={isData.enddate}
                       onChange={handleChange}
                       placeholder='Please Enter Your Date'
-                      className="w-full p-2 border rounded-md focus:outline-none text-black bg-white"
+                      className="w-full md:p-2 p-1 border rounded-md focus:outline-none text-black bg-white"
                       required
                     />
                   </div>  
                 </div>
-                {/* <div className="mb-4 md:col-span-2">
+                {/* <div className="md:mb-4 md:col-span-2">
                   <label
                     htmlFor="message"
                     className="block text-primary-main text-sm font-bold mb-2"
@@ -204,7 +204,7 @@ export default function FormPopup() {
                     value={isData.message}
                     onChange={handleChange}
                     placeholder='Please Enter Your Message'
-                    className="w-full p-2 border rounded-md focus:outline-none text-black bg-white resize-none h-32"
+                    className="w-full md:p-2 p-1 border rounded-md focus:outline-none text-black bg-white resize-none h-32"
                     required
                   />
                 </div> */}

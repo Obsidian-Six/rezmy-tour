@@ -11,16 +11,16 @@ export default function Blog() {
       title: "Exploring the Wonders of Dubai",
       category: "Dubai Travel Guide",
       description: "Discover the iconic landmarks, luxurious resorts, and adventure-filled activities that make Dubai a top tourist destination.",
-      image:"/assets/images/07.jpg",
+      image:"/assets/images/blogs/01.jpg",
       link: "/blog/exploring-dubai",
       date: "2024-11-15"
     },
     {
       id: 2,
-      title: "Top 5 Things to Do in Dubai",
+      title: "Skydiving over the Palm",
       category: "Dubai Adventure",
       description: "From skydiving over the Palm Jumeirah to visiting the Burj Khalifa, check out the top 5 thrilling activities you can't miss in Dubai.",
-      image:"/assets/images/07.jpg",
+      image:"/assets/images/blogs/02.jpg",
       link: "/blog/top-5-things-to-do-in-dubai",
       date: "2024-11-10"
     },
@@ -35,7 +35,7 @@ export default function Blog() {
     }
   ];
   return (
-    <div className='max-w-6xl mx-auto xl:px-0 px-6'>
+    <div className='max-w-6xl mx-auto xl:px-0 px-6 my-6'>
         <div className="md:mt-10 max-md:mt-5 flex md:justify-between max-md:justify-center items-center">
         <h2 className="md:text-3xl sm:text-2xl text-base max-md:text-center font-bold tracking-tight text-gray-900 dark:text-black">
           Our Blogs

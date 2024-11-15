@@ -7,7 +7,7 @@ const PackageHero = ({ name, img, page }) => {
     <div className="relative md:h-[30vw] max-md:h-[30vh]  text-white overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src={"/assets/images/05.png"}
+          src={img}
           alt="Background Image"
           className="object-cover object-center w-full h-full"
         />

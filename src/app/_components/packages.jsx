@@ -12,7 +12,7 @@ const Packages = () => {
   const handleOpen = () => dispatch(openModal());
   const pack = [
     {
-      img: "/assets/images/07.jpg",
+      img: "/assets/images/02.png",
       name: "Couple-Friendly Budget Package by Dubai Dreams Tours for 2 Pax",
       price: "10,000 AED",
       section: "couple",
@@ -25,7 +25,7 @@ const Packages = () => {
       ],
     },
     {
-      img: "/assets/images/07.jpg",
+      img: "/assets/images/08.png",
       name: "Couple-Friendly Standard Package by Dubai Dreams Tours for 2 Pax",
       price: "13,000 AED",
       section: "coupleStandard",
@@ -38,7 +38,7 @@ const Packages = () => {
       ],
     },
     {
-      img: "/assets/images/07.jpg",
+      img: "/assets/images/hero-section/02.png",
       name: "Family Package by Dubai Dreams Tours for 4 Pax",
       price: "26,500 AED",
       section: "family",
@@ -75,9 +75,9 @@ const Packages = () => {
         >
           <div className="md:w-[50%] max-md:w-[100%] flex max-md:flex-col items-center justify-center py-3">
             <img
-              className="md:w-[90%] max-md:w-[80%] h-full object-cover rounded-lg"
+              className="md:w-[90%] max-md:w-[80%] object-cover rounded-lg md:h-96 h-44"
               src={ele.img}
-              alt=""
+              alt="No Preview"
             />
           </div>
           <div className="bg-white md:w-[60%] md:px-6 lg:flex-shrink-1 max-md:px-8 md:py-4">
