@@ -70,7 +70,7 @@ const HeroSection = () => {
               alt="Background Image"
               className="object-cover object-center w-full h-full"
             />
-            <div className="absolute inset-0 bg-black opacity-40" />
+            <div className="absolute inset-0 bg-[#5b86e5] opacity-30" />
           </div>
           <div className="relative z-10 flex flex-col justify-center items-start h-full text-start max-w-5xl mx-auto md:p-0 sm:p-4 p-4 max-sm:text-center">
             <div
@@ -91,7 +91,7 @@ const HeroSection = () => {
             </p>
             <div className="md:hidden flex justify-center w-full mt-10">
               <button
-          className="bg-heading-main text-primary-main hover:bg-heading-main md:py-2 md:px-6 px-4 py-2 rounded lg:text-lg sm:text-base text-sm font-medium transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg "
+          className="text-white bg-primary-main  md:py-2 md:px-6 px-4 py-2 rounded lg:text-lg sm:text-base text-sm font-medium transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg "
           onClick={handleOpen}
         >
           Get Free Consultation!

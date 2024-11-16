@@ -39,7 +39,7 @@ const page = () => {
                 Phone
               </p>
               <p className="text-[#858587] max-md:text-[14px] md:mt-1.5 max-md:mt-1">
-                +91 12345 67890
+              +971565771119
               </p>
             </div>
           </div>
@@ -50,7 +50,7 @@ const page = () => {
                 Email
               </p>
               <p className="text-[#858587] max-md:text-[14px] md:mt-1.5 max-md:mt-1">
-                abctourandtravel@gmail.com<span className="max-sm:block"></span>
+              rezmytourllc@gmail.com<span className="max-sm:block"></span>
               </p>
             </div>
           </div>
@@ -62,7 +62,7 @@ const page = () => {
                 Location
               </p>
               <p className="text-[#858587] max-md:text-[14px] md:mt-1.5 max-md:mt-1">
-                01B, In5 Tech, Dubai Internet City, Dubai, U.A.E
+              Rezmytour FZ-LLC , Compass building - AI Hulaila Industrial Zone - FZ , Ras AI Khaimah
               </p>
             </div>
           </div>

@@ -58,7 +58,7 @@ export default function HeroSection() {
             </div>
           </div>
       <Swiper  
-        AutoPlay={true}
+        // AutoPlay={true}
         loop={true} 
         spaceBetween={40}  
         navigation={{

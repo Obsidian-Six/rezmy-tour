@@ -5,7 +5,7 @@ import { RxCrossCircled } from "react-icons/rx";
 import { useDispatch, useSelector } from 'react-redux';
 import { closeModel } from '../redux/modelSlice/modelSlice';
 import axios from 'axios';
-import { toast, ToastContainer } from 'react-toastify';
+// import { toast, ToastContainer } from 'react-toastify';
 import { TbLoaderQuarter } from "react-icons/tb";
 
 export default function FormPopup() {
@@ -85,8 +85,8 @@ export default function FormPopup() {
           className="fixed z-20 inset-0 overflow-y-auto"
         >
           <div className="flex items-center justify-center min-h-screen bg-white/50  p-6">
-            <div className="bg-heading-main w-full max-w-5xl rounded shadow-md">
-            <ToastContainer autoClose={3000} closeOnClick/>
+            <div className="bg-[#5b86e5] w-full max-w-5xl rounded shadow-md">
+            {/* <ToastContainer autoClose={3000} closeOnClick/> */}
               <div className="flex justify-end p-2">
                 {/* Close Button */}
                 <button
@@ -96,12 +96,12 @@ export default function FormPopup() {
                   <RxCrossCircled />
                 </button>
               </div>
-              <h2 className="text-3xl font-bold mb-4 text-primary-main px-4 text-center">Contact Us</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white px-4 text-center">Contact Us</h2>
               <form onSubmit={handleSubmit} className='grid md:grid-cols-2 gap-3 text-start  p-6'>
                 <div className="md:mb-4">
                   <label
                     htmlFor="name"
-                    className="block text-primary-main text-sm font-bold mb-2"
+                    className="block text-white text-sm font-bold mb-2"
                   >
                     Name
                   </label>
@@ -119,7 +119,7 @@ export default function FormPopup() {
                 {/* <div className="md:mb-4">
                   <label
                     htmlFor="email"
-                    className="block text-primary-main text-sm font-bold mb-2"
+                    className="block text-white text-sm font-bold mb-2"
                   >
                     Email
                   </label>
@@ -137,7 +137,7 @@ export default function FormPopup() {
                   <div className="md:mb-4">
                   <label
                     htmlFor="tel"
-                    className="block text-primary-main text-sm font-bold mb-2"
+                    className="block text-white text-sm font-bold mb-2"
                   >
                     Number
                   </label>
@@ -157,7 +157,7 @@ export default function FormPopup() {
                   <div className="md:mb-4">
                     <label
                       htmlFor="date"
-                      className="block text-primary-main text-sm font-bold mb-2"
+                      className="block text-white text-sm font-bold mb-2"
                     >
                       Start Date
                     </label>
@@ -175,7 +175,7 @@ export default function FormPopup() {
                   <div className="md:mb-4">
                     <label
                       htmlFor="date"
-                      className="block text-primary-main text-sm font-bold mb-2"
+                      className="block text-white text-sm font-bold mb-2"
                     >
                       End Date
                     </label>
@@ -194,7 +194,7 @@ export default function FormPopup() {
                 {/* <div className="md:mb-4 md:col-span-2">
                   <label
                     htmlFor="message"
-                    className="block text-primary-main text-sm font-bold mb-2"
+                    className="block text-white text-sm font-bold mb-2"
                   >
                     Message
                   </label>

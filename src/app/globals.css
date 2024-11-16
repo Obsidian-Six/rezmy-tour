@@ -63,7 +63,7 @@ body {
 .link_404 {
   color: #fff !important;
   padding: 10px 20px;
-  background: #C6A669;
+  background: #302B9C;
   margin: 20px 0;
   display: inline-block;
 }
@@ -80,10 +80,10 @@ body {
   display: flex;
   justify-items: center;
   align-items: center;
-  box-shadow: 2px 2px 3px #999;
+  box-shadow: 2px 2px 3px #302B9C;
   transform: translatey(0px);
   animation: pulse 1.5s infinite;
-  box-shadow: 0 0 0 0 #54a15d;
+  box-shadow: 0 0 0 0 #302B9C;
   -webkit-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
   -moz-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
   -ms-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);

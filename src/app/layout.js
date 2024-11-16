@@ -4,7 +4,7 @@ import Navbar from "./_components/navbar";
 import Footer from "./_components/footer";
 import { Providers } from "./redux/provider";
 import FormPopup from "./_components/form-popup";
-import 'react-toastify/dist/ReactToastify.css';
+// import 'react-toastify/dist/ReactToastify.css';
 import Whatsapp from "./_components/Whatsapp";
 
 const geistSans = localFont({
@@ -19,8 +19,8 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Create next app",
-  description: "",
+  title: "Rezmytour",
+  description: `Explore World with Rezmytour – your one-stop travel guide for luxury stays, thrilling adventures, and personalized packages. Plan your dream getaway today!`,
 };
 
 export default function RootLayoutFor({ children }) {

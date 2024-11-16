@@ -12,11 +12,11 @@ const Footer = () => {
           <div className="col-span-full md:col-span-4 relative text-gray-800  md:gap-6 max-md:gap-3 md:p-6 md:w-72 md:h-72 max-md:py-6 flex flex-col justify-center ">
           <Link
               href="/"
-              className="flex items-center justify-center space-x-3 rtl:space-x-reverse md:pr-32"
+              className="flex items-center justify-center space-x-3 rtl:space-x-reverse md:pr-40"
             >
               <img
-                src="https://bemyguestimagesnew.s3.ap-south-1.amazonaws.com/images/2024-09-01T05-26-57.600Z96.26911790648147.png"
-                className="h-10 "
+                src="/assets/images/logo.png"
+                className="h-10 scale-125"
                 alt="Flowbite Logo"
               />
             
@@ -26,21 +26,21 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4 max-md:justify-evenly max-md:px-10">
               <Link
-                href="https://www.instagram.com"
+                href="http://www.instagram.com/rezmytour"
                 target='_blank'  
                 className="w-9 h-9 rounded-full hover:text-white bg-white hover:bg-primary-main text-primary-main flex justify-center items-center hover:shadow-md"
               >
                 <FaInstagram />
               </Link>
-              <Link
+              {/* <Link
                 href="https://www.youtube.com"
                 target='_blank'  
                 className="w-9 h-9 rounded-full hover:text-white bg-white hover:bg-primary-main text-primary-main flex justify-center items-center hover:shadow-md"
               >
                 <FaYoutube />
-              </Link>
+              </Link> */}
               <Link
-                href="https://www.facebook.com"
+                href="http://www.facebook.com/rezmytour"
                 target='_blank'  
                 className="w-9 h-9 rounded-full hover:text-white bg-white hover:bg-primary-main text-primary-main flex justify-center items-center hover:shadow-md"
               >
@@ -92,16 +92,16 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="block text-center md:text-left md:py-12 col-span-full md:col-span-2 md:pl-5 max-md:mt-3 md:ml-4 max-md:mb-4 ">
+          <div className="block text-center md:text-left md:py-12 col-span-full md:col-span-3  md:pl-5 max-md:mt-3 md:ml-4 max-md:mb-4 ">
             <h4 className="text-lg text-primary-main font-bold md:mb-9 max-md:mb-3">Get In Touch</h4>
             <ul className="text-gray-600 transition-all duration-500 grid md:gap-6 max-md:gap-3 text-base font-medium">
-              <Link href={"mailto:abc@gmail.com"} className='hover:text-primary-main transition-transform'>abctourandtravel@gmail.com</Link>
+              <Link href={"mailto:arezmytourllc@gmail.com"} className='hover:text-primary-main transition-transform'>rezmytourllc@gmail.com</Link>
               <li>
-                <Link href={'tel:+911234567890'} className='hover:text-primary-main transition-transform' >+911234567890</Link>
+                <Link href={'tel:+971565771119'} className='hover:text-primary-main transition-transform' >+971565771119</Link>
                
                 {/* <Link href={'tel:+911234567890 '} className='hover:text-primary-main transition-transform' >+911234567890</Link> */}
                 </li>
-              <li>01B, In5 Tech, Dubai Internet City, Dubai, U.A.E</li>
+              <li>Rezmytour FZ-LLC , Compass building - AI Hulaila Industrial Zone - FZ , Ras AI Khaimah</li>
             </ul>
           </div>
         </div>

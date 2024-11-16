@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { IoCallSharp } from "react-icons/io5";
 import { TbLoaderQuarter } from "react-icons/tb";
-import { toast, ToastContainer } from "react-toastify";
+// import { toast, ToastContainer } from "react-toastify";
 
 const HomeContact = () => {
   const [isLoading , setIsLoading] = useState(false);
@@ -43,30 +43,30 @@ const HomeContact = () => {
       const handleSubmit = async (e) => {
         e.preventDefault();
         // console.log(formData); 
-        try{
-          setIsLoading(true)
-          const isFetch = await axios.post("", formData);
-          console.log(isFetch , "12345");
-          setIsLoading(false)
-          toast.success("Form Submitted Succesfully")
-          setFormData({
-            name:'',
-            email:'',
-            number:'',
-            date:'',
-            message:'',
-          })
-        }
-        catch(err){
-          setIsLoading(false)
-          console.log(err,"error hai");
-          toast.error("Error not Submitted")
-        }
+        // try{
+        //   setIsLoading(true)
+        //   const isFetch = await axios.post("", formData);
+        //   console.log(isFetch , "12345");
+        //   setIsLoading(false)
+        //   toast.success("Form Submitted Succesfully")
+        //   setFormData({
+        //     name:'',
+        //     email:'',
+        //     number:'',
+        //     date:'',
+        //     message:'',
+        //   })
+        // }
+        // catch(err){
+        //   setIsLoading(false)
+        //   console.log(err,"error hai");
+        //   toast.error("Error not Submitted")
+        // }
       };
     
   return (
     <div className="md:px-4 max-md:px-6 my-4 max-w-6xl flex mx-auto shadow shadow-primary-main bg-primary-main/10 rounded-lg" >
-         <ToastContainer />
+         {/* <ToastContainer /> */}
       <section className="md:p-6 sm:p-4 p-2 md:w-[60%] max-md:w-full">
         <div className="flex justify-between max-md:justify-center">
           <div className=" md:max-w-xl lg:max-w-3xl">
