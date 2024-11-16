@@ -95,7 +95,7 @@ const Footer = () => {
           <div className="block text-center md:text-left md:py-12 col-span-full md:col-span-3  md:pl-5 max-md:mt-3 md:ml-4 max-md:mb-4 ">
             <h4 className="text-lg text-primary-main font-bold md:mb-9 max-md:mb-3">Get In Touch</h4>
             <ul className="text-gray-600 transition-all duration-500 grid md:gap-6 max-md:gap-3 text-base font-medium">
-              <Link href={"mailto:arezmytourllc@gmail.com"} className='hover:text-primary-main transition-transform'>rezmytourllc@gmail.com</Link>
+              <Link href={"mailto:info@rezmytour.com"} className='hover:text-primary-main transition-transform'>info@rezmytour.com</Link>
               <li>
                 <Link href={'tel:+971565771119'} className='hover:text-primary-main transition-transform' >+971565771119</Link>
                

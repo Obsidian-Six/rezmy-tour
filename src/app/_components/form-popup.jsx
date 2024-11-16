@@ -211,7 +211,7 @@ export default function FormPopup() {
                 <button
                 disabled={isLoading}
                   type="submit"
-                  className="bg-primary-main-500 text-white font-bold py-2 px-4 rounded bg-primary-main w-fit flex items-center gap-4"
+                  className="text-primary-main font-bold py-2 px-4 rounded bg-white w-fit flex items-center gap-4"
                 >
                   Send Message {isLoading && <TbLoaderQuarter className='animate-spin' />}
                 </button>

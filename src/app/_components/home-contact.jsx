@@ -130,7 +130,7 @@ const HomeContact = () => {
               <input
                 type="date"
                 name="date"
-                className="md:h-[40px] max-md:h-[30px] max-md:text-[14px] sm:p-2 p-1 border w-full outline-none rounded-md"
+                className="md:h-[40px] max-md:h-[30px] max-md:text-[14px] sm:p-2 bg-white p-1 border w-full outline-none rounded-md"
                 id="number"
                 placeholder="Enter your estimate date"
                 value={formData.date}

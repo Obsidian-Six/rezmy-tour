@@ -54,7 +54,7 @@ const HomePackage = () => {
                 <img
                     alt="trees and mountains"
                     src={ele.img}
-                    className="rounded-lg w-full md:h-48 sm:h-36 h-28 object-cover"
+                    className="rounded-lg w-full md:h-48  h-36 object-cover"
                 />
                 <div className="">
                     <div className="flex items-center text-primary-main my-2">
