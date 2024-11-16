@@ -92,7 +92,7 @@ const Navbar = () => {
   <div
   className={`fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform hidden max-lg:inline ${
     isDrawer ? "translate-x-0" : "translate-x-full"
-  } w-72 bg-secondary-main`}
+  } w-72 bg-primary-main`}
 >
   <button
     type="button"
@@ -102,18 +102,18 @@ const Navbar = () => {
     <RxCross1 className="text-white text-xl" />
     <span className="sr-only">Close menu</span>
   </button>
-    {/* <h5
+    <h5
     id="drawer-navigation-label"
     className="text-base font-semibold text-white uppercase"
   >
-    <div className="flex items-center space-x-3 rtl:space-x-reverse">
+    <div className="flex items-center space-x-3 rtl:space-x-reverse mt-4">
       <img
-        src="/assets/images/logo.png"
+        src="/assets/images/logo-white.png"
         className="h-10"
         alt="Logo"
       />
     </div>
-  </h5> */}
+  </h5>
   <div className="py-4 overflow-y-auto">
     
 
@@ -122,7 +122,7 @@ const Navbar = () => {
         <li key={i} className='border-b-2'>
           <Link
             href={ele.link}
-            className={`flex items-center p-2 rounded-lg text-white  hover:bg-primary-main group cursor-pointer ${
+            className={`flex items-center p-2 rounded-lg text-white hover:text-primary-main  hover:bg-white group cursor-pointer ${
               path === ele.path
                 ? "bg-primary-main font-medium"
                 : "text-heading-main"

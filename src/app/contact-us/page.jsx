@@ -50,7 +50,7 @@ const page = () => {
                 Email
               </p>
               <p className="text-[#858587] max-md:text-[14px] md:mt-1.5 max-md:mt-1">
-              rezmytourllc@gmail.com<span className="max-sm:block"></span>
+              info@rezmytour.com<span className="max-sm:block"></span>
               </p>
             </div>
           </div>

@@ -21,27 +21,27 @@ export default function HeroSection() {
   const rev = [
     {
       name: 'Zayed Al-Fahim',
-      img: '01.jpg',
+      img: '01.png',
       data: 'Incredible Dubai experience with Rezmytour! Everything was so well-organized, from the desert safari to the Burj Khalifa visit. Highly recommended for anyone visiting Dubai.'
     },
     {
       name: 'Ayesha Al-Nahyan',
-      img: '02.jpg',
+      img: '02.png',
       data: 'Rezmytour made our Dubai trip unforgettable! The itinerary covered all the iconic landmarks, and the service was exceptional. Will definitely book again!'
     },
     {
       name: 'Omar Al-Maktoum',
-      img: '01.jpg',
+      img: '03.png',
       data: 'Amazing trip to Dubai with Rezmytour! From luxury shopping to thrilling desert adventures, every detail was taken care of. Outstanding service and professionalism!'
     },
     {
       name: 'Leila Al-Shehhi',
-      img: '02.jpg',
+      img: '04.png',
       data: 'Rezmytour provided us with a seamless and delightful Dubai tour experience. The Palm Jumeirah views and the Dubai Fountain show were breathtaking!'
     },
     {
       name: 'Faisal Al-Qasimi',
-      img: '01.jpg',
+      img: '05.png',
       data: 'Fantastic Dubai vacation thanks to Rezmytour! Loved the combination of luxury and adventure, especially the Dubai Marina cruise. Can’t wait to book my next trip!'
     },
   ];
@@ -72,7 +72,7 @@ export default function HeroSection() {
           rev?.map((ele, i )=> (
         <SwiperSlide key={i} className="p-6 grid items-center h-full w-full">
           <div className="md:h-16 md:w-16 h-12 w-12 relative">
-            <Image src={`/assets/images/blogs/${ele.img}`} alt="No Preview" fill className="object-cover rounded-full" />
+            <Image src={`/assets/images/testimonal/${ele.img}`} alt="No Preview" fill className="object-cover rounded-full" />
           </div>
           <p className="text-[#666] md:text-base text-sm mt-6">“ {ele.data} ”</p>
           <p className="md:text-lg text-base font-medium md:mt-4 mt-4">{ele.name}</p>

@@ -85,7 +85,7 @@ export default function FormPopup() {
           className="fixed z-20 inset-0 overflow-y-auto"
         >
           <div className="flex items-center justify-center min-h-screen bg-white/50  p-6">
-            <div className="bg-[#5b86e5] w-full max-w-5xl rounded shadow-md">
+            <div className="bg-primary-main w-full max-w-5xl rounded shadow-md">
             {/* <ToastContainer autoClose={3000} closeOnClick/> */}
               <div className="flex justify-end p-2">
                 {/* Close Button */}
