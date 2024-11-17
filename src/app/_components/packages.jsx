@@ -12,55 +12,76 @@ const Packages = () => {
   const handleOpen = () => dispatch(openModal());
   const pack = [
     {
-      img: "/assets/images/02.png",
-      name: "Couple-Friendly Budget Package by Dubai Dreams Tours for 2 Pax",
-      price: "10,000 AED",
-      section: "couple",
-      location: 'Desert Dunes, Tanoura Dance Show',
+      img: "/assets/images/pack2.jpg",
+      name: "Gorgeous Dubai 4 Nights / 5 Days ",
+      price: "INR 44,444",
+      section: "per person on DBL/TWIN sharing basis ",
+      location: 'Dubai',
       details: [
-        "Pick-up and drop-off service from Dubai International Airport",
-        "3N/2D stay in a budget-friendly hotel in Deira",
-        "Burj Khalifa At The Top ticket (non-prime hours)",
-        "Dubai Mall sightseeing and Fountain Show experience",
+        "04 Nights hotel accommodation in Park Regis Kris Kinn hotel or similar category hotel.",
+        "Daily continental buffet breakfast at the hotel restaurant.",
+        "Dubai Airport Arrival & Departure with PVT transfers (T1,T2&T3)",
+        "Dubai Marina Dhow cruise.",
+        "Dubai Half-day city tour.",
+        "Burj Khalifa with 124th floor non prime tickets.",
+        "Dubai Desert safari with BBQ dinner.",
+        "Dubai frame with entrance ticket.",
+        "Dubai VAT included.",
+        "All tours are with entrance ticket and sharing transfers (SIC) (Except Dubai Airport Transfers)",
       ],
     },
     {
-      img: "/assets/images/08.png",
-      name: "Couple-Friendly Standard Package by Dubai Dreams Tours for 2 Pax",
-      price: "13,000 AED",
-      section: "coupleStandard",
-      location: 'Desert Dunes, Tanoura Dance Show',
+      img: "/assets/images/04.webp",
+      name: "Stunning Dubai 5 Nights / 6 Days ",
+      price: "INR 80,888",
+      section: "per person on DBL/TWIN sharing basis ",
+      location: 'Dubai',
       details: [
-        "Pick-up and drop-off service from Dubai International Airport",
-        "3N/2D stay in a 4-star hotel in Downtown Dubai",
-        "Burj Khalifa At The Top ticket (prime hours)",
-        "Desert safari with BBQ dinner and traditional entertainment",
+        "05 Nights hotel accommodation in Movenpick hotel Bur Dubai or similar category hotel.",
+        "Daily continental buffet breakfast at the hotel restaurant.",
+        "Dubai Airport Arrival & Departure with PVT transfers (T1,T2&T3)",
+        "Dubai Marina Dhow cruise.",
+        "Dubai Half-day city tour.",
+        "Burj Khalifa with 124th floor non prime tickets.",
+        "Fountain show",
+        "Dubai Desert safari with BBQ dinner.",
+        "Dubai frame with entrance ticket.",
+        "Museum of the future",
+        "Abu Dhabi Full day city tour",
+        "Sheikh Zayed grand Mosque",
+        "Global Village & Miracle garden ",
+        "Access to any one park on Yas Island. 9Ferrari world Abu Dhabi/ Yas Waterworld/ Warner Bros World/ Sea world)",
+        "Dubai VAT included.",
+        "All tours are with entrance ticket and sharing transfers (SIC) (Except Dubai Airport Transfers)",
       ],
     },
     {
-      img: "/assets/images/hero-section/02.png",
-      name: "Family Package by Dubai Dreams Tours for 4 Pax",
-      price: "26,500 AED",
-      section: "family",
-      location: 'Desert Dunes, Tanoura Dance Show',
+      img: "/assets/images/pack3.jpg",
+      name: "Stunning Dubai and Fantastic Abu Dhabi 6 Nights / 7 Days ",
+      price: "INR 1,15,111",
+      section: "per person on DBL/TWIN sharing basis ",
+      location: 'Dubai',
       details: [
-        "Pick-up and drop-off service from Dubai International Airport",
-        "3N/2D deluxe stay in a family suite at a 5-star hotel",
-        "Dubai Marina dhow cruise with buffet dinner",
-        "Desert safari and Dubai Frame tickets for all members",
-      ],
-    },
-    {
-      img: "/assets/images/07.jpg",
-      name: "Family Package Standard by Dubai Dreams Tours for 4 Pax",
-      price: "46,200 AED",
-      section: "familyStandard",
-      location: 'Desert Dunes, Tanoura Dance Show',
-      details: [
-        "Pick-up and drop-off service from Dubai International Airport",
-        "3N/2D stay in a luxury resort at Palm Jumeirah",
-        "Exclusive yacht tour with onboard dinner",
-        "Desert safari with private guide and premium seating",
+        "05 Nights hotel accommodation in Avani Deira hotel or similar category hotel in Dubai.",
+        "01 Night hotel accommodation in W hotel or Similar 5* category hotel in Abu Dhabi.",
+        "Daily continental buffet breakfast at the hotel restaurant.",
+        "Dubai Airport Arrival & Departure with PVT transfers (T1,T2&T3)",
+        "Inter hotel transfers on PVT basis ",
+        "Dubai Half Day city tour on Sharing basis ",
+        "Museum of the future with private transfers basis ",
+        "Dubai desert safari with BBQ dinner on sharing basis",
+        "02 Hour yacht tour with private transfers",
+        "Madame Tussaudss with private transfers ",
+        "Dubai Dolphin show with private transfers",
+        "Global Village & Miracle garden with private transfers",
+        "Burj Khalifa with 124th floor non prime tickets.",
+        "Fountain show",
+        "Dubai Desert safari with BBQ dinner.",
+        "Dubai frame with entrance ticket.",
+        "Abu Dhabi Full day city tour with BAPS temple and Sheikh Zayed grand Mosque",
+        "Access to any one park on Yas Island. 9Ferrari world Abu Dhabi/ Yas Waterworld/ Warner Bros World/ Sea world)",
+        "Dubai VAT included.",
+        "All tours are with entrance ticket and sharing transfers (SIC) (Except Dubai Airport Transfers)",
       ],
     },
   ];
@@ -75,7 +96,7 @@ const Packages = () => {
         >
           <div className="md:w-[50%] max-md:w-[100%] flex max-md:flex-col items-center justify-center py-3">
             <img
-              className="md:w-[90%] max-md:w-[80%] object-cover rounded-lg md:h-96 h-44"
+              className="md:w-[90%] max-md:w-[80%] object-cover rounded-lg md:h-full h-44"
               src={ele.img}
               alt="No Preview"
             />
@@ -104,7 +125,7 @@ const Packages = () => {
                     <span className="md:text-[30px] max-md:text-[20px] font-700">
                       {ele.price} /
                     </span>{" "}
-                    Total package cost
+                    {ele.section}
                   </p>
                 </li>
               </ul>
