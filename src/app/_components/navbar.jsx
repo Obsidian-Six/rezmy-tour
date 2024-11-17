@@ -26,6 +26,10 @@ const Navbar = () => {
         link: '/packages'
     },
     {
+        name: 'Tours',
+        link: '/tours'
+    },
+    {
         name: 'Gallery',
         link: '/gallery'
     },
