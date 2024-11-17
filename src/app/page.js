@@ -11,6 +11,7 @@ import TourImageMarquee from "./_components/tour-image-marquee";
 import { useDispatch } from "react-redux";
 import { openModal } from "./redux/modelSlice/modelSlice";
 import Blog from "./_components/blog";
+import HomeTour from "./_components/home-tour";
 
 export default function Home() {
   
@@ -18,6 +19,7 @@ export default function Home() {
     <div className={montserrat.className}>
      <HeroSection />
      <HomePackage />
+     <HomeTour />
      <HomeAbout />
      <TestinomalSlider />
      <HomeContact />
