@@ -189,7 +189,7 @@ export default function Tour() {
                     className="object-cover"
                 />
                 </div>
-                <div className="p-4 flex flex-col justify-between h-[55%]">
+                <div className="p-4 flex flex-col justify-between lg:h-[55%]">
                 <p className="md:text-lg sm:text-base text-sm font-semibold mb-2">
                 {ele.name }
                 </p>
