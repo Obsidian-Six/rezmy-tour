@@ -22,9 +22,7 @@ export const metadata = {
   title: "Rezmytour",
   description: `Explore World with Rezmytour – your one-stop travel guide for luxury stays, thrilling adventures, and personalized packages. Plan your dream getaway today!`,
   icons: {
-    icon: "/favicon.ico", // Path to your favicon
-    apple: "/apple-touch-icon.png", // Optional: for Apple devices
-    shortcut: "/favicon-32x32.png", // Optional: For quick access
+    icon: "/favicon.ico",
   },
 };
 
