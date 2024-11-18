@@ -60,7 +60,7 @@ const Packages = () => {
       name: "Stunning Dubai and Fantastic Abu Dhabi 6 Nights / 7 Days ",
       price: "USD 1333",
       section: "per person on DBL/TWIN sharing basis ",
-      location: 'Dubai',
+      location: 'Abu Dhabi',
       details: [
         "05 Nights hotel accommodation in Avani Deira hotel or similar category hotel in Dubai.",
         "01 Night hotel accommodation in W hotel or Similar 5* category hotel in Abu Dhabi.",
