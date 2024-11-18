@@ -17,7 +17,7 @@ const HomePackage = () => {
     {
       img: '/assets/images/pack2.jpg',
       packageName: 'Gorgeous Dubai',
-      details: 'Experience the charm of Dubai with this amazing package. Explore iconic landmarks, indulge in shopping at world-class malls, and enjoy desert safaris. Perfect for families and first-time visitors.',
+      details: 'Experience the charm of Dubai with this amazing package. Explore iconic landmarks, indulge in shopping at world-class malls, and enjoy desert safaris.',
       location: 'Dubai',
       day: '4 Nights / 5 Days',
       price: 'USD 555',
