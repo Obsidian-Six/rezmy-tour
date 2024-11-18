@@ -4,7 +4,7 @@ import Navbar from "./_components/navbar";
 import Footer from "./_components/footer";
 import { Providers } from "./redux/provider";
 import FormPopup from "./_components/form-popup";
-// import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css';
 import Whatsapp from "./_components/Whatsapp";
 
 const geistSans = localFont({

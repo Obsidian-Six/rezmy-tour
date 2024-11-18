@@ -63,11 +63,11 @@ export default function HomeTour() {
                 </p>
                 <div className="">
                     <div className="text-primary-main ">
-                    <span className="block text-sm font-medium"> Rates Starting From : </span>
+                    <span className="block text-sm font-medium"> Starting From : </span>
                         <div className="flex items-center gap-2">
-                            <span className="line-through text-gray-400 text-sm ">
+                            {/* <span className="line-through text-gray-400 text-sm ">
                             {ele.oldPrice}
-                            </span>
+                            </span> */}
                             <span className="font-bold text-gray-600">{ele.price}</span>
 
                         </div>

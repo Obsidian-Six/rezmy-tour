@@ -5,7 +5,7 @@ import { RxCrossCircled } from "react-icons/rx";
 import { useDispatch, useSelector } from 'react-redux';
 import { closeModel } from '../redux/modelSlice/modelSlice';
 import axios from 'axios';
-// import { toast, ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import { TbLoaderQuarter } from "react-icons/tb";
 
 export default function FormPopup() {
@@ -51,29 +51,29 @@ export default function FormPopup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(isData ,"isData");
-    // try{
-    //   setIsLoading(true)
-    //   const isFetch = await axios.post("https://sheetdb.io/api/v1/szq8f9nqb7ont", isData);
-    //   console.log(isFetch , "12345");
-    //   setIsLoading(false)
-    //   toast.success("Form Submitted Succesfully")
-    //   setTimeout(()=> {
-    //     handleClose()
-    //   },3000)
-    //   setIsData({
-    //     name:'',
-    //     email:'',
-    //     number:'',
-    //     date:'',
-    //     enddate:'',
-    //     message:'',
-    //   })
-    // }
-    // catch(err){
-    //   setIsLoading(false)
-    //   console.log(err,"error hai");
-    //   toast.error("Error not Submitted")
-    // }
+    try{
+      setIsLoading(true)
+      const isFetch = await axios.post("https://sheetdb.io/api/v1/21741j8kl2gql", isData);
+      console.log(isFetch , "12345");
+      setIsLoading(false)
+      toast.success("Form Submitted Succesfully")
+      setTimeout(()=> {
+        handleClose()
+      },3000)
+      setIsData({
+        name:'',
+        email:'',
+        number:'',
+        date:'',
+        enddate:'',
+        message:'',
+      })
+    }
+    catch(err){
+      setIsLoading(false)
+      console.log(err,"error hai");
+      toast.error("Error not Submitted")
+    }
 
   }
 
@@ -81,12 +81,11 @@ export default function FormPopup() {
     <>
       {isOpen && ( // Conditional rendering of modal based on isOpen state
         <div
-          id="contactFormModal"
-          className="fixed z-20 inset-0 overflow-y-auto"
+        id="contactFormModal"
+        className="fixed z-20 inset-0 overflow-y-auto"
         >
           <div className="flex items-center justify-center min-h-screen bg-white/50  p-6">
             <div className="bg-primary-main w-full max-w-5xl rounded shadow-md">
-            {/* <ToastContainer autoClose={3000} closeOnClick/> */}
               <div className="flex justify-end p-2">
                 {/* Close Button */}
                 <button
@@ -116,7 +115,7 @@ export default function FormPopup() {
                     required
                   />
                 </div>
-                {/* <div className="md:mb-4">
+                <div className="md:mb-4">
                   <label
                     htmlFor="email"
                     className="block text-white text-sm font-bold mb-2"
@@ -133,7 +132,7 @@ export default function FormPopup() {
                     className="w-full md:p-2 p-1 border rounded-md focus:outline-none text-black bg-white"
                     required
                   />
-                </div> */}
+                </div>
                   <div className="md:mb-4">
                   <label
                     htmlFor="tel"
@@ -152,14 +151,12 @@ export default function FormPopup() {
                     required
                   />
                 </div>
-                <div className="grid md:grid-cols-2 md:col-span-2 gap-4">
-              
                   <div className="md:mb-4">
                     <label
                       htmlFor="date"
                       className="block text-white text-sm font-bold mb-2"
                     >
-                      Start Date
+                      Date
                     </label>
                     <input
                       type="date"
@@ -172,7 +169,8 @@ export default function FormPopup() {
                       required
                     />
                   </div>
-                  <div className="md:mb-4">
+              
+                  {/* <div className="md:mb-4">
                     <label
                       htmlFor="date"
                       className="block text-white text-sm font-bold mb-2"
@@ -189,8 +187,7 @@ export default function FormPopup() {
                       className="w-full md:p-2 p-1 border rounded-md focus:outline-none text-black bg-white"
                       required
                     />
-                  </div>  
-                </div>
+                  </div>   */}
                 {/* <div className="md:mb-4 md:col-span-2">
                   <label
                     htmlFor="message"
@@ -218,6 +215,8 @@ export default function FormPopup() {
               </form>
             </div>
           </div>
+          
+        <ToastContainer autoClose={3000} closeOnClick/>
         </div>
       )}
     </>
