@@ -20,7 +20,7 @@ const HomePackage = () => {
       details: 'Experience the charm of Dubai with this amazing package. Explore iconic landmarks, indulge in shopping at world-class malls, and enjoy desert safaris. Perfect for families and first-time visitors.',
       location: 'Dubai',
       day: '4 Nights / 5 Days',
-      price: 'INR 44,444',
+      price: 'USD 555',
     },
     {
       img: '/assets/images/04.webp',
@@ -28,7 +28,7 @@ const HomePackage = () => {
       details: 'Discover the vibrant culture and stunning architecture of Dubai. This package includes visits to the Burj Khalifa, Palm Jumeirah, and an unforgettable evening dhow cruise.',
       location: 'Dubai',
       day: '5 Nights / 6 Days',
-      price: 'INR 80,888',
+      price: 'USD 999',
     },
     {
       img: '/assets/images/pack3.jpg',
@@ -36,7 +36,7 @@ const HomePackage = () => {
       details: 'An extraordinary package covering the best of Dubai and Abu Dhabi. Highlights include the Sheikh Zayed Grand Mosque, Ferrari World, Dubai Frame, and luxurious experiences.',
       location: 'Dubai',
       day: '6 Nights / 7 Days',
-      price: 'INR 1,15,111',
+      price: 'USD 1333',
     },
   ];
   

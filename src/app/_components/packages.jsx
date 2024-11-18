@@ -14,7 +14,7 @@ const Packages = () => {
     {
       img: "/assets/images/pack2.jpg",
       name: "Gorgeous Dubai 4 Nights / 5 Days ",
-      price: "INR 44,444",
+      price: "USD 555",
       section: "per person on DBL/TWIN sharing basis ",
       location: 'Dubai',
       details: [
@@ -33,7 +33,7 @@ const Packages = () => {
     {
       img: "/assets/images/04.webp",
       name: "Stunning Dubai 5 Nights / 6 Days ",
-      price: "INR 80,888",
+      price: "USD 999",
       section: "per person on DBL/TWIN sharing basis ",
       location: 'Dubai',
       details: [
@@ -58,7 +58,7 @@ const Packages = () => {
     {
       img: "/assets/images/pack3.jpg",
       name: "Stunning Dubai and Fantastic Abu Dhabi 6 Nights / 7 Days ",
-      price: "INR 1,15,111",
+      price: "USD 1333",
       section: "per person on DBL/TWIN sharing basis ",
       location: 'Dubai',
       details: [
