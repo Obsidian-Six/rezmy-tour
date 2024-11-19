@@ -22,8 +22,8 @@ export default function FormPopup() {
     email:'',
     number:'',
     date:'',
-    enddate:'',
     message:'',
+    enquirydate: new Date().toISOString().split("T")[0],
   })
 
   const handleChange = (e) => {
@@ -65,8 +65,8 @@ export default function FormPopup() {
         email:'',
         number:'',
         date:'',
-        enddate:'',
         message:'',
+        enquirydate:new Date().toISOString().split("T")[0],
       })
     }
     catch(err){
@@ -166,6 +166,7 @@ export default function FormPopup() {
                       onChange={handleChange}
                       placeholder='Please Enter Your Date'
                       className="w-full md:p-2 p-1 border rounded-md focus:outline-none text-black bg-white"
+                      min={new Date().toISOString().split("T")[0]}
                       required
                     />
                   </div>
