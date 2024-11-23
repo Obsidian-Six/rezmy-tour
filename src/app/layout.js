@@ -34,10 +34,10 @@ export default function RootLayoutFor({ children }) {
     <html lang="en">
       <head>
         <Script
-          async
           src="https://www.googletagmanager.com/gtag/js?id=AW-16778951876"
+          strategy="afterInteractive"
         ></Script>
-        <Script id="google-analytics">
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -50,6 +50,16 @@ export default function RootLayoutFor({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
+        {/* <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-N98F7JV2"
+            height="0"
+            width="0"
+            style={{display:"none" , visibility:"hidden"}}
+          >
+
+          </iframe>
+        </noscript> */}
         <Providers>
           <Navbar />
           <FormPopup />

@@ -18,22 +18,22 @@ export default function FormPopup() {
   )
   const [isLoading , setIsLoading] = useState(false);
   const [isData , setIsData] = useState({
-    name:'',
-    email:'',
-    number:'',
-    date:'',
+    Name:'',
+    Email:'',
+    Contact_Number:'',
+    Travel_Date:'',
     message:'',
-    enquirydate: new Date().toISOString().split("T")[0],
+    Enquiry_Date: new Date().toISOString().split("T")[0],
   })
 
   const handleChange = (e) => {
-    if(e.target.name === "name"){
+    if(e.target.name === "Name"){
       setIsData({
         ...isData,
         [e.target.name]:e.target.value.replace(/[^a-z ]/gi, ""),
       })
     }
-    else if(e.target.name === "number"){
+    else if(e.target.name === "Contact_Number"){
       setIsData({
         ...isData,
         [e.target.name]:e.target.value.replace(/[^0-9 ]/gi, "")
@@ -61,12 +61,12 @@ export default function FormPopup() {
         handleClose()
       },3000)
       setIsData({
-        name:'',
+        Name:'',
         email:'',
-        number:'',
-        date:'',
+        Contact_Number:'',
+        Travel_Date:'',
         message:'',
-        enquirydate:new Date().toISOString().split("T")[0],
+        Enquiry_Date:new Date().toISOString().split("T")[0],
       })
     }
     catch(err){
@@ -107,8 +107,8 @@ export default function FormPopup() {
                   <input
                     type="text"
                     id="name"
-                    name="name"
-                    value={isData.name}
+                    name="Name"
+                    value={isData.Name}
                     onChange={handleChange}
                     placeholder='Please Enter Your Name'
                     className="w-full md:p-2 p-1 border rounded-md focus:outline-none text-black bg-white"
@@ -125,8 +125,8 @@ export default function FormPopup() {
                   <input
                     type="email"
                     id="email"
-                    name="email"
-                    value={isData.email}
+                    name="Email"
+                    value={isData.Email}
                     onChange={handleChange}
                     placeholder='Please Enter Your Email'
                     className="w-full md:p-2 p-1 border rounded-md focus:outline-none text-black bg-white"
@@ -143,8 +143,8 @@ export default function FormPopup() {
                   <input
                     type="tel"
                     id="tel"
-                    name="number"
-                    value={isData.number}
+                    name="Contact_Number"
+                    value={isData.Contact_Number}
                     onChange={handleChange}
                     placeholder='Please Enter Your Number'
                     className="w-full md:p-2 p-1 border rounded-md focus:outline-none text-black bg-white"
@@ -161,8 +161,8 @@ export default function FormPopup() {
                     <input
                       type="date"
                       id="date"
-                      name="date"
-                      value={isData.date}
+                      name="Travel_Date"
+                      value={isData.Travel_Date}
                       onChange={handleChange}
                       placeholder='Please Enter Your Date'
                       className="w-full md:p-2 p-1 border rounded-md focus:outline-none text-black bg-white"
