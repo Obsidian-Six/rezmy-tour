@@ -21,6 +21,7 @@ const HomePackage = () => {
       location: 'Dubai',
       day: '4 Nights / 5 Days',
       price: 555,
+      indPrice:"44,444"
     },
     {
       img: '/assets/images/04.webp',
@@ -29,6 +30,7 @@ const HomePackage = () => {
       location: 'Dubai',
       day: '5 Nights / 6 Days',
       price: 999,
+      indPrice:"80,888"
     },
     {
       img: '/assets/images/pack3.jpg',
@@ -37,6 +39,7 @@ const HomePackage = () => {
       location: 'Dubai',
       day: '6 Nights / 7 Days',
       price: 1333,
+      indPrice:"1,15,111"
     },
   ];
   
@@ -67,7 +70,7 @@ const HomePackage = () => {
                     <div className="text-gray-500 md:mb-4 max-md:mb-2 sm:text-base text-sm"> {ele.details}</div>
                     <div className="flex items-start lg:col-span-1 md:pt-1 mb-4">
                         <p className="mt-2 md:text-lg max-md:text-md leading-5 text-primary-main font-ttnorms text-left ">
-                        <span className="md:text-[20px] max-md:text-[20px] font-700">USD {ele.price} <span className="">  ( INR {ele.price*22.5} )</span></span><br /> Total package cost
+                        <span className="md:text-[20px] max-md:text-[20px] font-700">USD {ele.price} <span className="">/ (INR {ele.indPrice})</span></span><br /> Total package cost
                         </p>
                     </div>
                     <div className="grid grid-cols-1 gap-4">
