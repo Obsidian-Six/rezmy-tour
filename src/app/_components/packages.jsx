@@ -2,7 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import { useDispatch } from "react-redux";
 import { openModal } from "../redux/modelSlice/modelSlice";
@@ -10,11 +10,14 @@ import { openModal } from "../redux/modelSlice/modelSlice";
 const Packages = () => {
   const dispatch = useDispatch();
   const handleOpen = () => dispatch(openModal());
+
+  const [selectedRegion, setSelectedRegion] = useState("Dubai");
   const pack = [
     {
       img: "/assets/images/pack2.jpg",
       name: "Gorgeous Dubai 4 Nights / 5 Days ",
       price: "USD 555",
+      indPrice:"INR 44,444",
       section: "per person on DBL/TWIN sharing basis ",
       location: 'Dubai',
       details: [
@@ -34,6 +37,7 @@ const Packages = () => {
       img: "/assets/images/04.webp",
       name: "Stunning Dubai 5 Nights / 6 Days ",
       price: "USD 999",
+      indPrice:"INR 80,888",
       section: "per person on DBL/TWIN sharing basis ",
       location: 'Dubai',
       details: [
@@ -59,6 +63,7 @@ const Packages = () => {
       img: "/assets/images/pack3.jpg",
       name: "Stunning Dubai and Fantastic Abu Dhabi 6 Nights / 7 Days ",
       price: "USD 1333",
+      indPrice:"INR 1,15,111",
       section: "per person on DBL/TWIN sharing basis ",
       location: 'Dubai and Abu Dhabi',
       details: [
@@ -88,6 +93,18 @@ const Packages = () => {
   
   return (
     <div className="max-w-6xl mx-auto md:space-y-16 max-md:space-y-4 md:my-10 max-md:my-8">
+      {/* <div className="">
+        <p className="text-xl font-semibold text-primary-main mb-2">Currency Type</p>
+        <select
+          className="p-1 px-4 border border-gray-300 rounded-md bg-primary-main text-white"
+          value={selectedRegion}
+          onChange={(e) => setSelectedRegion(e.target.value)}
+        >
+          <option value="Dubai">Dubai</option>
+          <option value="India">India</option>
+        </select>
+
+      </div> */}
       {pack.map((ele, i) => (
         <div
           id={ele.section}
@@ -103,7 +120,7 @@ const Packages = () => {
           </div>
           <div className="bg-white md:w-[60%] md:px-6 lg:flex-shrink-1 max-md:px-8 md:py-4">
             <div className="flex items-center text-primary-main my-2">
-              <FaLocationDot className="mr-2 md:text-[20px] max-md:text-[10px]"></FaLocationDot>
+              <FaLocationDot className="mr-2 md:text-xl max-md:text-[10px]"></FaLocationDot>
               <span className="md:text-[16px] max-md:text-[12px]">
                 {ele.location}
               </span>
@@ -121,9 +138,9 @@ const Packages = () => {
                   </li>
                 ))}
                 <li className="flex items-start lg:col-span-1 max-md:pt-1">
-                  <p className="mt-4 md:text-lg max-md:text-lg leading-5 text-primary-main font-ttnorms text-left ">
-                    <span className="md:text-[30px] max-md:text-[20px] font-700">
-                      {ele.price} /
+                  <p className="mt-4 md:text-sm max-md:text-lg leading-5 text-primary-main font-ttnorms text-left ">
+                    <span className="md:text-2xl max-md:text-xl font-700">
+                      {ele.indPrice} <span className="md:text-xl ">({ele.price})</span>/
                     </span>{" "}
                     {ele.section}
                   </p>

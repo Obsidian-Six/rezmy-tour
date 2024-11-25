@@ -15,163 +15,163 @@ export default function Tour() {
             img: "01.png",
             name: "Dhow Cruise with Dinner - Dubai Creek",
             oldPrice: "AED 75.00",
-            price: "AED 55.00"
+            price: "55.00"
         },
         {
             img: "27.png",
             name: "AYA Universe with Dubai Dhow Cruise with Dinner - Dubai Marina",
             oldPrice: "AED 150.00",
-            price: "AED 135.00"
+            price: "135.00"
         },
         {
             img: "02.png",
             name: "Luxury Yacht Ride - Dubai Marina",
             oldPrice: "AED 250.00",
-            price: "AED 210.00"
+            price: "210.00"
         },
         {
             img: "03.png",
             name: "Desert Safari",
             oldPrice: "AED 175.00",
-            price: "AED 157.50"
+            price: "157.50"
         },
         {
             img:"04.png",
             name: "Atlantis Aquaventure Water Park",
             oldPrice: "AED 175.00",
-            price: "AED 135.00"
+            price: "135.00"
         },
         {
             img:"05.png",
             name: "SeaWorld Abu Dhabi",
             oldPrice: "AED 375.00",
-            price: "AED 320.00"
+            price: "320.00"
         },
         {
             img:"06.png",
             name: "Dubai Dolphinarium Ticket",
             oldPrice: "AED 75.00",
-            price: "AED 55.00"
+            price: "55.00"
         },
         {
             img:"09.png",
             name: "The View at The Palm Jumeirah Dubai",
             oldPrice: "AED 114.00",
-            price: "AED 69.00"
+            price: "69.00"
         },
         {
             img:"10.png",
             name: "Abu Dhabi City Tour",
             oldPrice: "AED 135.00",
-            price: "AED 121.00"
+            price: "121.00"
         },
         {
             img:"11.png",
             name: "Ferrari World Theme Park with Entrance Ticket and Transfers",
             oldPrice: "AED 344.00",
-            price: "AED 295.00"
+            price: "295.00"
         },
         {
             img:"08.png",
             name: "Dubai Frame",
             oldPrice: "AED 50.00",
-            price: "AED 44.00"
+            price: "44.00"
         },
         {
             img:"07.png",
             name: "Museum of the Future",
             oldPrice: "AED 149.00",
-            price: "AED 139.00"
+            price: "139.00"
         },
         {
             img:"12.png",
             name: "Wild Wadi Water Park",
             oldPrice: "AED 299.00",
-            price: "AED 259.00"
+            price: "259.00"
         },
         {
             img:"13.png",
             name: "IMG Theme Park with Entrance Ticket and Transfers",
             oldPrice: "AED 325.00",
-            price: "AED 290.00"
+            price: "290.00"
         },
         {
             img:"14.png",
             name: "Dubai Aquarium & Underwater Zoo at Dubai Mall",
             oldPrice: "AED 233.00",
-            price: "AED 199.00"
+            price: "199.00"
         },
         {
             img:"15.png",
             name: "Global Village Dubai",
             oldPrice: "AED 25.00",
-            price: "AED 22.00"
+            price: "22.00"
         },
         {
             img:"16.png",
             name: "Miracle Garden",
             oldPrice: "AED 55.00",
-            price: "AED 45.00"
+            price: "45.00"
         },
         {
             img:"17.png",
             name: "Motiongate Dubai",
             oldPrice: "AED 325.00",
-            price: "AED 290.00"
+            price: "290.00"
         },
         {
             img:"18.png",
             name: "LEGOLAND Theme Park Dubai",
             oldPrice: "AED 275.00",
-            price: "AED 235.00"
+            price: "235.00"
         },
         {
             img:"19.png",
             name: "LEGOLAND Water Park Dubai",
             oldPrice: "AED 275.00",
-            price: "AED 235.00"
+            price: "235.00"
         },
         {
             img:"20.png",
             name: "The Lost Chambers Aquarium",
             oldPrice: "AED 100.00",
-            price: "AED 85.00"
+            price: "85.00"
         },
         {
             img:"21.png",
             name: "Crocodile Park Dubai",
             oldPrice: "AED 95.00",
-            price: "AED 75.00"
+            price: "75.00"
         },
         {
             img:"22.png",
             name: "Expo City Dubai",
             oldPrice: "AED 165.00",
-            price: "AED 140.00"
+            price: "140.00"
         },
         {
             img:"23.png",
             name: "Warner Bros. World Abu Dhabi",
             oldPrice: "AED 345.00",
-            price: "AED 295.00"
+            price: "295.00"
         },
         {
             img:"24.png",
             name: "Yas Waterworld Abu Dhabi",
             oldPrice: "AED 250.00",
-            price: "AED 215.00"
+            price: "215.00"
         },
         {
             img:"25.png",
             name: "Real Madrid World Dubai",
             oldPrice: "AED 325.00",
-            price: "AED 295.00"
+            price: "295.00"
         },
         {
             img:"26.png",
             name: "XLine Dubai Marina",
             oldPrice: "AED 699.00",
-            price: "AED 499.00"
+            price: "499.00"
         }
     ];
     
@@ -200,7 +200,7 @@ export default function Tour() {
                             {/* <span className="line-through text-gray-400 text-sm ">
                             {ele.oldPrice}
                             </span> */}
-                            <span className="font-bold text-gray-600">{ele.price}</span>
+                            <span className="font-bold text-gray-600"> AED {ele.price} / (INR {ele.price*22.94.toFixed(0)})</span>
 
                         </div>
                     </div>

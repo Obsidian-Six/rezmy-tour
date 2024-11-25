@@ -16,25 +16,25 @@ export default function HomeTour() {
             img: "01.png",
             name: "Dhow Cruise with Dinner - Dubai Creek",
             oldPrice: "AED 75.00",
-            price: "AED 55.00"
+            price: "55.00"
         },
         {
             img: "02.png",
             name: "Luxury Yacht Ride - Dubai Marina",
             oldPrice: "AED 250.00",
-            price: "AED 210.00"
+            price: "210.00"
         },
         {
             img: "03.png",
             name: "Desert Safari",
             oldPrice: "AED 175.00",
-            price: "AED 157.50"
+            price: "157.50"
         },
         {
             img:"04.png",
             name: "Atlantis Aquaventure Water Park",
             oldPrice: "AED 175.00",
-            price: "AED 135.00"
+            price: "135.00"
         }
     ]
   return (
@@ -68,7 +68,7 @@ export default function HomeTour() {
                             {/* <span className="line-through text-gray-400 text-sm ">
                             {ele.oldPrice}
                             </span> */}
-                            <span className="font-bold text-gray-600">{ele.price}</span>
+                            <span className="font-bold text-gray-600">AED {ele.price}  / (INR {ele.price*22.94.toFixed(0)})</span>
 
                         </div>
                     </div>
