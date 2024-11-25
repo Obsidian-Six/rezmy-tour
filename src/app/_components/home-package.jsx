@@ -17,10 +17,10 @@ const HomePackage = () => {
     {
       img: '/assets/images/pack2.jpg',
       packageName: 'Gorgeous Dubai',
-      details: 'Experience the charm of Dubai with this amazing package. Explore iconic landmarks, indulge in shopping at world-class malls, and enjoy desert safaris.',
+      details: 'Experience the charm of Dubai with this amazing package. Explore iconic landmarks, indulge in shopping at world-class malls, Burj Khalifa and enjoy desert safaris.',
       location: 'Dubai',
       day: '4 Nights / 5 Days',
-      price: 'USD 555',
+      price: 555,
     },
     {
       img: '/assets/images/04.webp',
@@ -28,7 +28,7 @@ const HomePackage = () => {
       details: 'Discover the vibrant culture and stunning architecture of Dubai. This package includes visits to the Burj Khalifa, Palm Jumeirah, and an unforgettable evening dhow cruise.',
       location: 'Dubai',
       day: '5 Nights / 6 Days',
-      price: 'USD 999',
+      price: 999,
     },
     {
       img: '/assets/images/pack3.jpg',
@@ -36,7 +36,7 @@ const HomePackage = () => {
       details: 'An extraordinary package covering the best of Dubai and Abu Dhabi. Highlights include the Sheikh Zayed Grand Mosque, Ferrari World, Dubai Frame, and luxurious experiences.',
       location: 'Dubai',
       day: '6 Nights / 7 Days',
-      price: 'USD 1333',
+      price: 1333,
     },
   ];
   
@@ -67,7 +67,7 @@ const HomePackage = () => {
                     <div className="text-gray-500 md:mb-4 max-md:mb-2 sm:text-base text-sm"> {ele.details}</div>
                     <div className="flex items-start lg:col-span-1 md:pt-1 mb-4">
                         <p className="mt-2 md:text-lg max-md:text-md leading-5 text-primary-main font-ttnorms text-left ">
-                        <span className="md:text-[24px] max-md:text-[20px] font-700">{ele.price} /</span> Total package cost
+                        <span className="md:text-[20px] max-md:text-[20px] font-700">USD {ele.price} <span className="">  ( INR {ele.price*22.5} )</span></span><br /> Total package cost
                         </p>
                     </div>
                     <div className="grid grid-cols-1 gap-4">
