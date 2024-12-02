@@ -156,7 +156,7 @@ export default function FormPopup() {
                       htmlFor="date"
                       className="block text-white text-sm font-bold mb-2"
                     >
-                      Date
+                     Travel Date
                     </label>
                     <input
                       type="date"
