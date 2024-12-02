@@ -90,7 +90,7 @@ export default function FormPopup() {
                 {/* Close Button */}
                 <button
                   onClick={handleClose} // onClick event to close the modal
-                  className="text-red-500 text-xl"
+                  className="text-white text-xl"
                 >
                   <RxCrossCircled />
                 </button>
