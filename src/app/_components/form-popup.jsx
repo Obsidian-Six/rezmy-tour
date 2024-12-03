@@ -90,7 +90,7 @@ export default function FormPopup() {
                 {/* Close Button */}
                 <button
                   onClick={handleClose} // onClick event to close the modal
-                  className="text-red-500 text-xl"
+                  className="text-white text-xl"
                 >
                   <RxCrossCircled />
                 </button>
@@ -156,7 +156,7 @@ export default function FormPopup() {
                       htmlFor="date"
                       className="block text-white text-sm font-bold mb-2"
                     >
-                      Date
+                     Travel Date
                     </label>
                     <input
                       type="date"
