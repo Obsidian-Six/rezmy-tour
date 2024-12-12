@@ -74,9 +74,9 @@ const HomePackage = () => {
                         </p>
                     </div>
                     <div className="grid grid-cols-1 gap-4">
-                      <button onClick={handleOpen} className="bg-primary-main text-white md:py-2 py-1 md:px-4 md:rounded-lg rounded-sm w-full md:text-base sm:text-sm text-xs">
+                      <Link href={'/packages'} className="bg-primary-main text-white md:py-2 py-1 md:px-4 md:rounded-lg rounded-sm w-full md:text-base sm:text-sm text-xs">
                       Book Now
-                      </button>
+                      </Link>
                       {/* <Link href={'tel:+919425639221'} className="text-primary-main border-primary-main border md:py-2 max-md:py-2 md:px-4 md:rounded-lg rounded-sm text-center w-full md:text-base sm:text-sm text-xs">
                       Call Now
                       </Link> */}

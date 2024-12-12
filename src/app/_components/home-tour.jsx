@@ -72,7 +72,7 @@ export default function HomeTour() {
 
                         </div>
                     </div>
-                    <button onClick={handleOpen} className="bg-gray-100 font-bold p-2 rounded-md text-secondary-main text-sm mt-4 px-10">Book Now</button>
+                    <button onClick={handleOpen} className="bg-primary-main hover:bg-gray-100 font-bold p-2 rounded-md text-white hover:text-secondary-main text-sm mt-4 px-10">Book Now</button>
 
                     </div>
                 </div>
