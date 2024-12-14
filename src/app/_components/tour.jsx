@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { useDispatch } from "react-redux";
 import { openModal } from "../redux/modelSlice/modelSlice";
+import Link from "next/link";
 
 export default function Tour() {
     const dispatch = useDispatch();
@@ -204,8 +205,16 @@ export default function Tour() {
 
                         </div>
                     </div>
-                    <button onClick={handleOpen} className="bg-primary-main hover:bg-gray-100 font-bold p-2 rounded-md text-white hover:text-secondary-main text-sm mt-4 px-10">Book Now</button>
+                    <div className="grid md:grid-cols-2 mt-4 gap-2">
+                        <button onClick={handleOpen} className="bg-primary-main hover:bg-gray-100 font-semibold p-2 rounded-md text-white text-sm  border border-primary-main hover:text-primary-main">Book Now</button>
+                        <Link
+                        href="tel:+971565771119"
+                        className="font-semibold rounded-md border border-primary-main bg-white text-primary-main flex justify-center items-center text-sm hover:bg-primary-main hover:text-white"
+                    >
+                        Call Now
+                    </Link>
 
+                    </div>
                     </div>
                 </div>
             </div>
