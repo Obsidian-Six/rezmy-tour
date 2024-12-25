@@ -133,11 +133,9 @@ const Packages = () => {
             <div className="md:mt-4 max-md:mt-2">
               <ul className="pl-0 lg:grid lg:gap-y-2 max-md:gap-y-2 md:space-y-5 lg:space-y-0 max-md:space-y-2">
                 {ele.details.map((dat, j) => (
-                  <li key={j} className="flex items-start lg:col-span-1">
-                    <p className="md:text-base max-md:text-sm leading-5 text-black text-left">
+                    <li key={j} className="list-disc ml-4 lg:col-span-1 md:text-base max-md:text-sm leading-5 text-black text-left">
                       {dat}
-                    </p>
-                  </li>
+                    </li>
                 ))}
                 <li className="flex items-start lg:col-span-1 max-md:pt-1">
                   <p className="mt-4 md:text-sm max-md:text-lg leading-5 text-primary-main font-ttnorms text-left ">
