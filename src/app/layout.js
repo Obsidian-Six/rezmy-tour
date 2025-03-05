@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/next-script-for-ga */
 import localFont from "next/font/local";
 import "./globals.css";
@@ -77,6 +78,7 @@ export default function RootLayoutFor({ children }) {
           <img
             height="1"
             width="1"
+            alt=""
             style={{ display: "none" }}
             src="https://www.facebook.com/tr?id=1672227453032126&ev=PageView&noscript=1"
           />
@@ -85,16 +87,10 @@ export default function RootLayoutFor({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
-        {/* <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-N98F7JV2"
-            height="0"
-            width="0"
-            style={{display:"none" , visibility:"hidden"}}
-          >
-
-          </iframe>
-        </noscript> */}
+          <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        rel="stylesheet"
+      />
         <Providers>
           <Navbar />
           <FormPopup />

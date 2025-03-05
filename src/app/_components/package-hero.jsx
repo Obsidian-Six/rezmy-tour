@@ -4,14 +4,14 @@ import React from "react";
 
 const PackageHero = ({ name, img, page }) => {
   return (
-    <div className="relative md:h-[30vw] max-md:h-[95vh]  text-white overflow-hidden">
+    <div className="relative md:h-[35vw] max-md:h-[100vh]  text-white overflow-hidden">
       <div className="absolute inset-0">
         <img
           src={img}
           alt="Background Image"
           className="object-cover object-center w-full h-full"
         />
-        <div className="absolute inset-0 bg-[#42424275]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent" />
       </div>
       <div className="relative z-10 flex flex-col justify-center items-center h-full text-center max-md:px-4 max-md:mt-4">
         <div className="font-medium text-center ">

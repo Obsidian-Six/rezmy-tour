@@ -20,7 +20,7 @@ const HomeAbout = () => {
 
             </div>
             <div className="md:w-[80%] relative md:h-[22vw] h-[50vw]">
-            <Image src="/assets/images/04.webp" alt="A group of People" fill className="object-cover rounded-md" />
+            <Image sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="/assets/images/04.webp" alt="A group of People" fill className="object-cover rounded-md" />
             </div>
         </div>
     </div>

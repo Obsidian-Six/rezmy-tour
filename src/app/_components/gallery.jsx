@@ -41,7 +41,7 @@ export default function Gallery() {
           {
             images.slice(0,4).map((ele,i) => (
             <div key={i} className="relative photo1 h-full group overflow-hidden  cursor-pointer w-[25%] rounded-sm" onClick={() => {setPhotoIndex(i); setIsOpen(true)}}>
-              <Image fill className="group-hover:scale-105 transition-transform object-cover object-center w-full h-full" src={ele} alt="" />
+              <Image sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" fill className="group-hover:scale-105 transition-transform object-cover object-center w-full h-full" src={ele} alt="" />
               <div className='absolute top-0 left-0 bg-black/40 h-full w-full flex justify-center items-center text-white '><span className='group-hover:inline hidden'> View</span></div>
             </div>
             ))
@@ -51,7 +51,7 @@ export default function Gallery() {
           {
             images.slice(4,9).map((ele,i) => (
             <div key={i} className="relative photo1 h-full group overflow-hidden  cursor-pointer w-[25%] rounded-sm "  onClick={() => {setPhotoIndex(i+4); setIsOpen(true)}}>
-              <Image fill className="group-hover:scale-105 transition-transform object-cover object-center w-full h-full" src={ele} alt="" />
+              <Image sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" fill className="group-hover:scale-105 transition-transform object-cover object-center w-full h-full" src={ele} alt="" />
               <div className='absolute top-0 left-0 bg-black/40 h-full w-full flex justify-center items-center text-white '><span className='group-hover:inline hidden'> View</span></div>
             </div>
             ))
@@ -61,7 +61,7 @@ export default function Gallery() {
           {
             images.slice(9,12).map((ele,i) => (
             <div key={i} className="relative photo1 h-full group overflow-hidden  cursor-pointer w-[33%] "  onClick={() => {setPhotoIndex(i+9); setIsOpen(true)}}>
-              <Image fill className="group-hover:scale-105 transition-transform object-cover object-center w-full h-full" src={ele} alt="" />
+              <Image sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" fill className="group-hover:scale-105 transition-transform object-cover object-center w-full h-full" src={ele} alt="" />
               <div className='absolute top-0 left-0 bg-black/40 h-full w-full flex justify-center items-center text-white '><span className='group-hover:inline hidden'> View</span></div>
             </div>
             ))

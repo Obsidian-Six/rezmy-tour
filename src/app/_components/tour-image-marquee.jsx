@@ -18,7 +18,7 @@ export default function TourImageMarquee() {
       {arr.map((ele, i) => (
         <div key={i} className="md:h-52 sm:h-32 h-24 py-1 w-full md:px-2 px-1">
           <img
-            className="object-cover h-full w-full"
+            className="object-cover h-full w-full border-2 border-primary-main rounded-lg p-0.5"
             src={ele}
             alt=""
           />

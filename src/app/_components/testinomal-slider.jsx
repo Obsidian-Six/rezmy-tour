@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import React, { useRef, useState } from "react";
@@ -20,70 +21,83 @@ import Image from "next/image";
 export default function HeroSection() {
   const rev = [
     {
-      name: 'Zayed Al-Fahim',
-      img: '01.png',
-      data: 'Incredible Dubai experience with Rezmytour! Everything was so well-organized, from the desert safari to the Burj Khalifa visit. Highly recommended for anyone visiting Dubai.'
+      name: "Zayed Al-Fahim",
+      img: "01.png",
+      data: "Incredible Dubai experience with Rezmytour! Everything was so well-organized, from the desert safari to the Burj Khalifa visit. Highly recommended for anyone visiting Dubai.",
     },
     {
-      name: 'Ayesha Al-Nahyan',
-      img: '02.png',
-      data: 'Rezmytour made our Dubai trip unforgettable! The itinerary covered all the iconic landmarks, and the service was exceptional. Will definitely book again!'
+      name: "Ayesha Al-Nahyan",
+      img: "02.png",
+      data: "Rezmytour made our Dubai trip unforgettable! The itinerary covered all the iconic landmarks, and the service was exceptional. Will definitely book again!",
     },
     {
-      name: 'Omar Al-Maktoum',
-      img: '03.png',
-      data: 'Amazing trip to Dubai with Rezmytour! From luxury shopping to thrilling desert adventures, every detail was taken care of. Outstanding service and professionalism!'
+      name: "Omar Al-Maktoum",
+      img: "03.png",
+      data: "Amazing trip to Dubai with Rezmytour! From luxury shopping to thrilling desert adventures, every detail was taken care of. Outstanding service and professionalism!",
     },
     {
-      name: 'Leila Al-Shehhi',
-      img: '04.png',
-      data: 'Rezmytour provided us with a seamless and delightful Dubai tour experience. The Palm Jumeirah views and the Dubai Fountain show were breathtaking!'
+      name: "Leila Al-Shehhi",
+      img: "04.png",
+      data: "Rezmytour provided us with a seamless and delightful Dubai tour experience. The Palm Jumeirah views and the Dubai Fountain show were breathtaking!",
     },
     {
-      name: 'Faisal Al-Qasimi',
-      img: '05.png',
-      data: 'Fantastic Dubai vacation thanks to Rezmytour! Loved the combination of luxury and adventure, especially the Dubai Marina cruise. Can’t wait to book my next trip!'
+      name: "Faisal Al-Qasimi",
+      img: "05.png",
+      data: "Fantastic Dubai vacation thanks to Rezmytour! Loved the combination of luxury and adventure, especially the Dubai Marina cruise. Can’t wait to book my next trip!",
     },
   ];
-  
+
   return (
-     <div id="review" className="relative w-full h-full max-w-6xl mx-auto md:py-10 max-md:py-5 max-md:pb-20 xl:px-10 px-6 bg-[#FEFCFB] rounded-md">
-    <div className="grid md:grid-cols-2 grid-cols-1 w-full h-full">
-        <div>
-            <h1 className={`md:text-3xl sm:text-2xl text-base font-bold tracking-tight text-gray-900 dark:text-black leading-9  max-md:text-center`}>Testimonial<span className="text-primary-main pt-2 text-4xl"><br />  </span></h1>
-            <p className="text-[#666666] max-w-sm md:mt-6 max-md:mt-2 max-md:text-[14px] max-md:text-center">Our Clients send us bunch of smilies with our services and we love them.</p>
-            <div>
-              <button className='HomeSlidePrev text-primaryMain absolute md:bottom-12 bottom-2 max-md:left-1/3 -translate-y-1/2 z-10 hover:bg-primary-main hover:text-white text-xl p-2 rounded-full border border-primary-main text-primary-main'><FaArrowLeft /></button>
-              <button className='HomeSlideNext text-primaryMain absolute md:bottom-12 bottom-2 max-md:left-1/2 -translate-y-1/2 md:left-28 left-20 z-10 hover:bg-primary-main hover:text-white text-xl p-2 rounded-full border border-primary-main text-primary-main'><FaArrowRight /></button> 
-            </div>
-          </div>
-      <Swiper  
-        // AutoPlay={true}
-        loop={true} 
-        spaceBetween={40}  
+    <div
+      id="review"
+      className="max-w-6xl mx-auto max-md:px-6 relative my-10 md:mt-20"
+    >
+      <div className="mt-10 mb-5 max-md:my-5 flex justify-between items-center">
+        <h2 className="md:text-3xl sm:text-2xl text-xl font-bold tracking-tight text-gray-900 dark:text-black">
+          Our Testimonial
+        </h2>
+        <div className=" flex justify-end md:absolute top-0 right-0 md:mb-8 gap-4">
+          <button className="button-prev-text border-primary-main text-primary-main border hover:bg-primary-main hover:text-white rounded md:p-2 p-1 max-md:px-2">
+            <i className="fas fa-chevron-left"></i>
+          </button>
+          <button className="button-next-text border-primary-main text-primary-main border hover:bg-primary-main hover:text-white rounded md:p-2 p-1 max-md:px-2">
+            <i className="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+      <Swiper
+        modules={[Navigation, Pagination]}
         navigation={{
-            prevEl: `.HomeSlidePrev`,
-            nextEl: `.HomeSlideNext`,
+          nextEl: ".button-next-text",
+          prevEl: ".button-prev-text",
         }}
-        modules={[Pagination, Navigation]}
-        className="mySwiper w-full shadow-[0px_8px_16px_2px_rgba(0,0,0,0.07)] h-64 max-md:mt-4 rounded-xl"
+        loop="true"
+        spaceBetween={20}
+        breakpoints={{
+          320: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+        className=""
       >
-        {
-          rev?.map((ele, i )=> (
-        <SwiperSlide key={i} className="p-6 grid items-center h-full w-full">
-          <div className="md:h-16 md:w-16 h-12 w-12 relative">
-            <Image src={`/assets/images/testimonal/${ele.img}`} alt="No Preview" fill className="object-cover rounded-full" />
-          </div>
-          <p className="text-[#666] md:text-base text-sm mt-6">“ {ele.data} ”</p>
-          <p className="md:text-lg text-base font-medium md:mt-4 mt-4">{ele.name}</p>
-        </SwiperSlide>
+        {rev?.map((ele, i) => (
+          <SwiperSlide
+            key={i}
+            className="bg-white my-6  text-center p-1"
+          >
+            <div className="border border-primary-main/50 p-4 rounded-lg ">
+              <img
+                src={`/assets/images/testimonal/${ele.img}`}
+                alt={`Portrait of ${ele.name}`}
+                className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+              />
+              <h3 className="text-xl font-semibold mb-2">{ele.name}</h3>
+              <p className="text-gray-600">“{ele.data}”</p>
 
-          ))
-        }
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
-
-    </div>
     </div>
   );
 }
-

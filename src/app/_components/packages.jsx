@@ -15,6 +15,7 @@ const Packages = () => {
   const [selectedRegion, setSelectedRegion] = useState("Dubai");
   const pack = [
     {
+      link:'packone',
       img: "/assets/images/pack2.jpg",
       name: "Gorgeous Dubai 4 Nights / 5 Days ",
       price: "USD 555",
@@ -35,6 +36,7 @@ const Packages = () => {
       ],
     },
     {
+      link:'packtwo',
       img: "/assets/images/04.webp",
       name: "Stunning Dubai 5 Nights / 6 Days ",
       price: "USD 999",
@@ -61,6 +63,7 @@ const Packages = () => {
       ],
     },
     {
+      link:'packthree',
       img: "/assets/images/pack3.jpg",
       name: "Stunning Dubai and Fantastic Abu Dhabi 6 Nights / 7 Days ",
       price: "USD 1333",
@@ -108,12 +111,12 @@ const Packages = () => {
       </div> */}
       {pack.map((ele, i) => (
         <div
-          id={ele.section}
+          id={ele.link}
           key={i}
           className="md:h-auto overflow-hidden lg:max-w-none lg:flex shadow-teal bg-white rounded-lg shadow-lg max-md:p-4"
         >
           <div className="md:w-[50%] max-md:w-[100%] flex max-md:flex-col items-center justify-center py-3 relative md:h-auto h-44">
-            <Image
+            <Image sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover max-md:rounded-lg"
               src={ele.img}
               fill

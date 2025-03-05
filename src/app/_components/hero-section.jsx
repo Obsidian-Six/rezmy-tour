@@ -59,7 +59,7 @@ const HeroSection = () => {
       }}
       // navigation={true}
       modules={[Autoplay, Pagination, Navigation]}
-      className="mySwiper relative  text-white overflow-hidden lg:h-[40vw] md:h-[40vw] sm:h-[50vw] h-[95vh]"
+      className="mySwiper relative  text-white overflow-hidden h-screen"
     >
       {
         arr.map((ele,i) => (
@@ -70,9 +70,9 @@ const HeroSection = () => {
               alt="Background Image"
               className="object-cover object-center w-full h-full"
             />
-            <div className="absolute inset-0 bg-[#5b86e5] opacity-30" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent" />
           </div>
-          <div className="relative z-10 flex flex-col justify-center items-start h-full text-start max-w-5xl mx-auto md:p-0 sm:p-4 p-4 max-sm:text-center">
+          <div className="relative z-10 flex md:mt-10 flex-col justify-center items-start h-full text-start max-w-6xl mx-auto md:p-0 sm:p-4 p-4 max-sm:text-center">
             <div
               data-aos="fade-up"
               data-aos-duration="3000"
