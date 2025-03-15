@@ -11,11 +11,11 @@ import "swiper/css/pagination";
 import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
 import { tourpackagedata } from "@/app/_components/tour";
 
-const HeroSlider = () => {
+const HeroSlider = ({ele}) => {
   return (
     <>
-    <div className="grid grid-cols-5 gap-8 items-center">
-      <div className=" col-span-3">
+    <div className="grid md:grid-cols-5 md:gap-8 gap-4 items-center">
+      <div className=" md:col-span-3 max-md:w-screen">
         <Swiper
           modules={[Navigation, Pagination]}
           navigation={{ nextEl: ".button-next", prevEl: ".button-prev" }}
@@ -23,27 +23,27 @@ const HeroSlider = () => {
           pagination={true}
           spaceBetween={20}
           slidesPerView = {1}
-          className="mt-10 relative"
+          className="md:mt-10 relative"
         >
-          {tourpackagedata.map((tour, i) => (
+          {/* {tourpackagedata.map((tour, i) => ( */}
             <SwiperSlide
-              key={i}
-              className="rounded-lg"
+              // key={i}
+              className="md:rounded-lg"
             >
               <img
-                src={`/assets/images/tours/${tour.img}`}
-                alt={tour.name}
-                className="transition-transform transform w-full h-96 object-cover rounded-2xl"
+                src={ele.img}
+                alt={ele.name}
+                className="transition-transform transform md:w-full h-96 object-cover md:rounded-2xl"
               />
             </SwiperSlide>
-          ))}
+          {/* ))} */}
 
           <div className=" flex justify-between items-center h-full w-full absolute top-0 z-10">
             <button className="button-prev ">
-              <FaCircleChevronLeft className="text-4xl hover:text-primary-main hover:bg-white text-white rounded-full " />
+              <FaCircleChevronLeft className="text-4xl hover:text-primary-main hover:bg-white text-gray-600 bg-white rounded-full " />
             </button>
             <button className="button-next">
-              <FaCircleChevronRight className="text-4xl hover:text-primary-main hover:bg-white text-white rounded-full " />
+              <FaCircleChevronRight className="text-4xl hover:text-primary-main hover:bg-white text-gray-600 bg-white rounded-full " />
             </button>
           </div>
         </Swiper>
@@ -51,12 +51,12 @@ const HeroSlider = () => {
 
         </div>
       </div>
-      <div className="col-span-2">
-        <p className="text-black-main text-4xl font-bold">Gorgeous Dubai</p>
-        <p className=" text-lg font-semibold bg-black text-white w-fit p-2 rounded-md mt-5">4 Nights/ 5 Days</p>
-        <p className="text-[#27AE60] text-2xl font-semibold mt-10">₹44,444 / $555</p>
+      <div className="md:col-span-2 max-md:p-4">
+        <p className="text-black-main md:text-4xl text-3xl font-bold">{ele.name}</p>
+        <p className=" md:text-lg text-base font-semibold bg-black text-white w-fit p-2 rounded-md mt-5">{ele.night} Nights/ {ele.day} Days</p>
+        <p className="text-[#27AE60] text-2xl font-semibold mt-10">₹{ele.indPrice} / ${ele.price}</p>
         <p className="text-black-main text-sm">per person on DBL/TWIN sharing basis</p>
-        <div className="grid grid-cols-5 gap-4 mt-7">
+        <div className="grid md:grid-cols-5 grid-cols-4 gap-4 mt-7">
                 <Link
                   href={
                     "https://api.whatsapp.com/send?phone=+971565771119&text=Hey!%20Can%20I%20Get%20More%20Info%20On%20This?"

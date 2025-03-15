@@ -11,15 +11,15 @@ import "swiper/css/pagination";
 import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
 import { tourpackagedata } from "@/app/_components/tour";
 
-const PlaceSee = () => {
+const PlaceSee = ({ele}) => {
   return (
-    <div className="grid grid-cols-5 gap-8 my-10">
-      <div className="col-span-3 ">
+    <div className="grid md:grid-cols-5 md:gap-8 gap-4 my-10 max-md:px-4">
+      <div className="md:col-span-3 ">
         <div className="flex justify-between items-center ">
-          <div className="sm:text-2xl text-xl font-semibold tracking-tight text-primary-main w-full">
+          <div className="sm:text-2xl text-xl font-semibold tracking-tight text-primary-main md:w-full">
             Places You’ll See
           </div>
-          <div className=" flex justify-end gap-4 w-full">
+          <div className=" flex justify-end gap-4 md:w-full">
             <button className="button-prev-pack ">
               <FaCircleChevronLeft className="text-3xl hover:text-primary-main hover:bg-white text-[#B3B3B3] rounded-full " />
             </button>
@@ -29,6 +29,7 @@ const PlaceSee = () => {
           </div>
         </div>
         <Swiper
+        className="max-md:w-[90vw]"
           modules={[Navigation, Pagination]}
           navigation={{
             nextEl: ".button-next-pack",
@@ -47,7 +48,7 @@ const PlaceSee = () => {
               <img
                 src={`/assets/images/tours/${tour.img}`}
                 alt={tour.name}
-                className="transition-transform transform  w-full h-48 object-cover rounded-md"
+                className="transition-transform transform w-full h-48 object-cover rounded-md"
               />
               <p className="text-lg font-semibold mt-2">{tour.name}</p>
             </SwiperSlide>
@@ -58,12 +59,12 @@ const PlaceSee = () => {
           <button className="bg-primary-main text-white md:font-bold font-medium md:p-4 md:px-10 p-1 rounded-md md:text-lg text-sm">Get Offers </button>
         </div>
       </div>
-      <div className="col-span-2">
+      <div className="md:col-span-2 ">
         <div className="sm:text-2xl text-xl font-semibold text-primary-main w-full">
           View On Map
         </div>
         <iframe
-          className="rounded-2xl mt-5"
+          className="rounded-2xl mt-5 max-md:h-52"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093675!2d144.96305761531546!3d-37.81627927975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df0f89b61%3A0x4b2a3f0d2b5b44e5!2sMelbourne%20CBD%2C%20Victoria%2C%20Australia!5e0!3m2!1sen!2sin!4v1644182747580!5m2!1sen!2sin"
           width="100%"
           height="85%"
