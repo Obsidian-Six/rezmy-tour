@@ -16,12 +16,12 @@ import HomeTour from "./_components/home-tour";
 export default function Home() {
   const dispatch = useDispatch();
 
-  const handleOpen = () => (
-    dispatch(openModal())
-  )
-  setTimeout(()=> {
-    handleOpen();
-  },5000)
+  // const handleOpen = () => (
+  //   dispatch(openModal())
+  // )
+  // setTimeout(()=> {
+  //   handleOpen();
+  // },5000)
   return (
     <div className={montserrat.className}>
      <HeroSection />

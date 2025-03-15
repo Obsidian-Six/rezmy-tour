@@ -1,16 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { blogData } from '../blogs/page';
+import { blogData } from "../blogs/page";
+import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
 
 export default function Blog() {
-       
   // const blogData = [
   //   {
   //     id: 1,
@@ -50,20 +50,22 @@ export default function Blog() {
   //   },
   // ];
   return (
-    <div className='max-w-6xl mx-auto xl:px-0 px-8 my-6 relative'>
-      <div className="mt-10 mb-5 max-md:my-5 flex justify-between items-center">
-        <h2 className="md:text-3xl sm:text-2xl text-xl font-bold tracking-tight text-gray-900 dark:text-black">
-          Our Blogs
-        </h2>
-        <div className=" flex justify-end md:absolute top-0 right-0 md:mb-8 gap-4">
-          <button className="button-prev-blog border-primary-main text-primary-main border hover:bg-primary-main hover:text-white rounded md:p-2 p-1 max-md:px-2">
-            <i className="fas fa-chevron-left"></i>
+    <div className="max-w-6xl mx-auto xl:px-0 px-8 my-6 relative">
+      <div className="mt-10 max-md:my-5 flex justify-between items-center">
+        <div className="w-full max-md:hidden"></div>
+        <div className="md:text-3xl sm:text-2xl text-xl font-bold tracking-tight text-black-main text-center md:w-full">
+          Blogs
+        </div>
+        <div className=" flex justify-end gap-4 md:w-full items-center">
+          <button className="button-prev-blog ">
+            <FaCircleChevronLeft className="md:text-4xl text-3xl hover:text-primary-main hover:bg-white text-[#B3B3B3] rounded-full " />
           </button>
-          <button className="button-next-blog border-primary-main text-primary-main border hover:bg-primary-main hover:text-white rounded md:p-2 p-1 max-md:px-2">
-            <i className="fas fa-chevron-right"></i>
+          <button className="button-next-blog">
+            <FaCircleChevronRight className="md:text-4xl text-3xl hover:text-primary-main hover:bg-white text-[#B3B3B3] rounded-full " />
           </button>
         </div>
       </div>
+
       <Swiper
         modules={[Navigation, Pagination]}
         navigation={{
@@ -77,39 +79,46 @@ export default function Blog() {
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 4 },
         }}
-        className=" max-md:my-2 md:mt-10">
+        className=" max-md:my-2 md:mt-10"
+      >
         {blogData.map((blog) => (
-        <SwiperSlide key={blog.id} className="relative flex flex-col sm:flex-row xl:flex-col items-start">
-          <div className='relative mb-6 shadow-md rounded-lg overflow-hidden bg-secondary-main/10 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full h-44'>
-            <Image sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          <SwiperSlide
+            key={blog.id}
+            className="relative flex flex-col sm:flex-row xl:flex-col items-start"
+          >
+            <div className="relative mb-6 shadow-md rounded-lg overflow-hidden bg-secondary-main/10 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full h-44">
+              <Image
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover h-full w-full"
                 fill
                 src={blog.image}
                 alt={blog.title}
-            />
-          </div>
-          <div className=" sm:ml-6 xl:ml-0">
-            <h3 className="mb-1 text-heading-main font-semibold text-lg">
-              <span className={`mb-1 block text-sm leading-6 ${blog.categoryColor}`}>
-                {blog.category}
-              </span>
-              {blog.title}
-            </h3>
-            <p className="text-secondary-main text-base mt-2">{blog.description}</p>
-          </div>
-        </SwiperSlide>
-      ))}
-            
-        </Swiper>
-        <div className="flex justify-center">
+              />
+            </div>
+            <div className=" sm:ml-6 xl:ml-0">
+              <h3 className="mb-1 text-primary-main font-semibold text-lg">
+                <span
+                  className={`mb-1 block text-sm text-black-main leading-6 ${blog.categoryColor}`}
+                >
+                  {blog.category}
+                </span>
+                {blog.title}
+              </h3>
+              <p className="text-secondary-main text-base mt-2 leading-6">
+                {blog.description}
+              </p>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <div className="flex justify-center">
         <Link
-          href={'/blogs'}
-            className="inline-block rounded text-primary-main md:text-base sm:text-sm text-xs font-medium md:leading-normal bg-white border-primary-main border-2 hover:shadow-md hover:bg-primary-main hover:text-white w-fit md:px-10 max-md:px-5 md:mt-6 p-2 max-md:mt-2"
-          >
-            View More
-          </Link>
-        </div>
-
+          href={"/blogs"}
+          className="inline-block rounded bg-primary-main md:text-base sm:text-sm text-xs font-medium md:leading-normal text-white border-primary-main border-2 hover:shadow-md hover:bg-primary-main hover:text-white w-fit md:px-10 max-md:px-5 md:mt-6 p-2 max-md:mt-2"
+        >
+          More Blogs
+        </Link>
+      </div>
     </div>
-  )
+  );
 }

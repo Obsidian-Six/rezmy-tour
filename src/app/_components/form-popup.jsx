@@ -85,7 +85,7 @@ export default function FormPopup() {
         <div className="z-10 p-6 rounded-lg max-w-7xl mx-auto">
             
           <div className="flex justify-center">
-            <div className="bg-gradient-to-b from-primary-main to-secondary-main text-white rounded-lg shadow-lg flex flex-col md:flex-row w-full max-w-4xl md:pl-4">
+            <div className="bg-gradient-to-b from-primary-main to-[#8E2DE2] text-white rounded-lg shadow-lg flex flex-col md:flex-row w-full max-w-4xl md:pl-4">
               <div className=" p-4 rounded-t-lg md:rounded-l-lg md:rounded-tr-none flex-1 max-md:hidden">
                 <h2 className="text-xl font-semibold mb-4">
                   Get best offers on Dubai Packages

@@ -12,23 +12,24 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { tourpackagedata } from "./tour";
+import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
 
 export default function HomeTour() {
   const dispatch = useDispatch();
   const handleOpen = () => dispatch(openModal());
-
   return (
-    <div className="max-w-6xl mx-auto xl:p-0 md:p-6 max-md:px-6 relative">
+    <div className="max-w-6xl mx-auto xl:p-0 md:p-6 max-md:px-6 relative my-10">
       <div className="mt-10 max-md:mt-5 flex justify-between items-center">
-        <h2 className="md:text-3xl sm:text-2xl text-xl font-bold tracking-tight text-gray-900 dark:text-black">
+        <div className="w-full max-md:hidden"></div>
+        <div className="md:text-3xl sm:text-2xl text-xl font-bold tracking-tight text-black-main text-center md:w-full">
           Our Tour
-        </h2>
-        <div className=" flex justify-end md:absolute top-0 right-0 md:mb-8 gap-4">
-          <button className="button-prev border-primary-main text-primary-main border hover:bg-primary-main hover:text-white rounded md:p-2 p-1 max-md:px-2">
-            <i className="fas fa-chevron-left"></i>
+        </div>
+        <div className=" flex justify-end gap-4 md:w-full items-center">
+          <button className="button-prev ">
+            <FaCircleChevronLeft className="md:text-4xl text-3xl hover:text-primary-main hover:bg-white text-[#B3B3B3] rounded-full " />
           </button>
-          <button className="button-next border-primary-main text-primary-main border hover:bg-primary-main hover:text-white rounded md:p-2 p-1 max-md:px-2">
-            <i className="fas fa-chevron-right"></i>
+          <button className="button-next">
+            <FaCircleChevronRight className="md:text-4xl text-3xl hover:text-primary-main hover:bg-white text-[#B3B3B3] rounded-full " />
           </button>
         </div>
       </div>
@@ -60,17 +61,26 @@ export default function HomeTour() {
               <h2 className="text-lg font-semibold mb-2 line-clamp-1">
                 {tour.name}
               </h2>
-              <p className="text-sm text-gray-500 mb-2">Starting from only</p>
-              <p className="text-green-600 text-xl font-bold mb-4">
-                {tour.price}
+              <p className="text-xs text-gray-500">Starting from only</p>
+              <p className="text-green-600 text-lg font-semibold mb-4">
+               AED {tour.price} / ₹ {tour.price*23}
               </p>
               <div className="grid grid-cols-4 gap-4 mt-3">
-                <Link href={'https://api.whatsapp.com/send?phone=+971565771119&text=Hey!%20Can%20I%20Get%20More%20Info%20On%20This?'} className="border border-primary-main text-primary-main text-sm hover:text-white hover:bg-primary-main transition-transform font-bold px-4 py-2 rounded flex items-center justify-center w-full">
-                  <i className="fab fa-whatsapp text-2xl"></i>
+                <Link
+                  href={
+                    "https://api.whatsapp.com/send?phone=+971565771119&text=Hey!%20Can%20I%20Get%20More%20Info%20On%20This?"
+                  }
+                  className="border border-primary-main text-primary-main hover:text-white hover:bg-primary-main transition-transform  rounded flex items-center justify-center w-full"
+                >
+                   <img
+                      src="/assets/svg/WhatsApp.svg"
+                      alt=""
+                      className=" my-float w-10"
+                    />
                 </Link>
                 <button
                   onClick={handleOpen}
-                  className="col-span-3 text-center border border-primary-main text-primary-main hover:text-white hover:bg-primary-main transition-transform text-sm font-bold px-4 py-2 rounded flex items-center justify-center w-full"
+                  className="col-span-3 text-center border border-primary-main text-primary-main hover:text-white hover:bg-primary-main transition-transform text-sm font-medium px-4 py-2 rounded flex items-center justify-center w-full"
                 >
                   Get Offers
                 </button>
