@@ -167,7 +167,7 @@ const HeroSection = () => {
       }
     </Swiper> */}
       <section
-        className="relative flex flex-col md:flex-row items-center justify-center min-h-screen h-full bg-cover bg-center"
+        className="relative flex flex-col md:flex-row items-center justify-center bg-cover bg-center"
         style={{
           backgroundImage: 'url("/assets/images/hero-section/09.png")',
         }}
