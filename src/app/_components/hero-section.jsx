@@ -17,6 +17,7 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { RxCrossCircled } from "react-icons/rx";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 const HeroSection = () => {
   const dispatch = useDispatch();
@@ -88,12 +89,9 @@ const HeroSection = () => {
         "https://sheetdb.io/api/v1/21741j8kl2gql",
         isData
       );
-      console.log(isFetch, "12345");
+      // console.log(isFetch, "12345");
       setIsLoading(false);
       toast.success("Form Submitted Succesfully");
-      setTimeout(() => {
-        handleClose();
-      }, 3000);
       setIsData({
         Name: "",
         email: "",

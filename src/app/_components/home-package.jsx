@@ -106,7 +106,7 @@ const HomePackage = () => {
   //     inrPrice: "₹1,15,111",
   //   },
   // ];
-  console.log(pack)
+  // console.log(pack) 
 
   return (
     <div className="bg-[#F3F4FB] xl:p-0 md:p-6 max-md:px-6 ">

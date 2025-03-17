@@ -10,29 +10,30 @@ import { toast, ToastContainer } from "react-toastify";
 
 const HomeContact = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    number: "",
-    date: "",
-    enddate: "",
-    message: "",
+  const [isData, setIsData] = useState({
+    Name: "",
+    Email: "",
+    Contact_Number: "",
+    Travel_Date: "",
+    Message: "",
+    Enquiry_Date: new Date().toISOString().split("T")[0],
+    ContactMethod: "",
   });
 
   const handleChange = (e) => {
     if (e.target.name === "name") {
-      setFormData({
-        ...formData,
+      setIsData({
+        ...isData,
         [e.target.name]: e.target.value.replace(/[^a-z ]/gi, ""),
       });
     } else if (e.target.name === "number") {
-      setFormData({
-        ...formData,
+      setIsData({
+        ...isData,
         [e.target.name]: e.target.value.replace(/[^0-9 ]/gi, ""),
       });
     } else {
-      setFormData({
-        ...formData,
+      setIsData({
+        ...isData,
         [e.target.name]: e.target.value,
       });
     }
@@ -40,22 +41,24 @@ const HomeContact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    console.log(isData);
     try {
       setIsLoading(true);
       const isFetch = await axios.post(
         "https://sheetdb.io/api/v1/21741j8kl2gql",
-        formData
+        isData
       );
       console.log(isFetch, "12345");
       setIsLoading(false);
       toast.success("Form Submitted Succesfully");
-      setFormData({
-        name: "",
-        email: "",
-        number: "",
-        date: "",
-        message: "",
+      setIsData({
+        Name: "",
+        Email: "",
+        Contact_Number: "",
+        Travel_Date: "",
+        Message: "",
+        Enquiry_Date: new Date().toISOString().split("T")[0],
+        ContactMethod: "",
       });
     } catch (err) {
       setIsLoading(false);
@@ -91,7 +94,7 @@ const HomeContact = () => {
                 className="md:h-[40px] max-md:h-[30px] max-md:text-[14px] sm:p-2 p-1 border w-full outline-none rounded-md"
                 id="name"
                 placeholder="Enter your Name"
-                value={formData.name}
+                value={isData.name}
                 onChange={handleChange}
                 required
               />
@@ -106,7 +109,7 @@ const HomeContact = () => {
                   className="md:h-[40px] max-md:h-[30px] max-md:text-[14px] sm:p-2 p-1 border w-full outline-none rounded-md"
                   id="email"
                   placeholder="Enter your email address"
-                  value={formData.email}
+                  value={isData.email}
                   onChange={handleChange}
                   required
                 />
@@ -121,7 +124,7 @@ const HomeContact = () => {
                   className="md:h-[40px] max-md:h-[30px] max-md:text-[14px] sm:p-2 p-1 border w-full outline-none rounded-md"
                   id="number"
                   placeholder="Enter your phone number"
-                  value={formData.number}
+                  value={isData.number}
                   onChange={handleChange}
                   required
                 />
@@ -136,7 +139,7 @@ const HomeContact = () => {
                   className="md:h-[40px] max-md:h-[30px] max-md:text-[14px] sm:p-2 bg-white p-1 border w-full outline-none rounded-md"
                   id="number"
                   placeholder="Enter your estimate date"
-                  value={formData.date}
+                  value={isData.date}
                   onChange={handleChange}
                   required
                 />
@@ -151,7 +154,7 @@ const HomeContact = () => {
                 name="message"
                 className="md:p-3 sm:p-2 p-1 border rounded-[5px] w-full outline-none resize-none md:h-20 max-md:h-14 sm:h-32 h-28 "
                 placeholder="Enter your message"
-                value={formData.message}
+                value={isData.message}
                 onChange={handleChange}
                 required
               />
@@ -186,13 +189,16 @@ const HomeContact = () => {
           <div className="md:p-8 p-6 bg-white">
             <h2 className="text-2xl font-semibold mb-2 text-black-main">Your Perfect Vacation</h2>
             <h3 className="text-2xl font-semibold text-primary-main mb-6">Starts Here!</h3>
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <input
                   className="w-full px-3 py-2 border rounded-lg border-[#B3B3B3]"
                   id="name"
                   placeholder="Name"
                   type="text"
+                  name="Name"
+                        value={isData.Name}
+                        onChange={handleChange}
                 />
               </div>
               <div className="mb-4">
@@ -201,6 +207,9 @@ const HomeContact = () => {
                   id="email"
                   placeholder="E-mail"
                   type="email"
+                  name="Email"
+                  value={isData.Email}
+                  onChange={handleChange}
                 />
               </div>
               <div className="mb-4 flex">
@@ -208,6 +217,9 @@ const HomeContact = () => {
                   className="w-full px-3 py-2 border rounded-r-lg"
                   placeholder="+91 Phone Number"
                   type="text"
+                  name="Contact_Number"
+                  value={isData.Contact_Number}
+                  onChange={handleChange}
                 />
               </div>
               <div className="mb-4">
@@ -215,6 +227,9 @@ const HomeContact = () => {
                   className="w-full px-3 py-2 border rounded-lg border-[#B3B3B3]"
                   id="date"
                   type="date"
+                  name="Travel_Date"
+                        value={isData.Travel_Date}
+                        onChange={handleChange}
                 />
               </div>
               <div className="mb-4">
@@ -224,6 +239,9 @@ const HomeContact = () => {
                   placeholder="Message"
                   rows={3}
                   defaultValue={""}
+                  name="Message"
+                  value={isData.Message}
+                  onChange={handleChange}
                 />
               </div>
               <div className="mb-4">
