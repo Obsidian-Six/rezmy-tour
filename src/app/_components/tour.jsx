@@ -189,7 +189,7 @@ export default function Tour() {
             <h2 className="text-lg font-semibold mb-2">{tour.name}</h2>
             <p className="text-sm text-gray-500 mb-2">Starting from only</p>
             <p className="text-green-600 text-xl font-bold mb-4">
-              {tour.price}
+              AED {tour.price} / ₹ {tour.price*23}
             </p>
             <div className="grid grid-cols-4 gap-4 mt-3">
                 <Link
