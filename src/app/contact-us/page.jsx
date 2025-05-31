@@ -62,7 +62,7 @@ const page = () => {
                 Location
               </p>
               <p className="text-[#858587] max-md:text-[14px] md:mt-1.5 max-md:mt-1">
-{/*               Rezmytour FZ-LLC , Compass building - AI Hulaila Industrial Zone - FZ , Ras AI Khaimah */}
+              Rezmytour FZ-LLC , Compass building - AI Hulaila Industrial Zone - FZ , Ras AI Khaimah <br />
                 Coming Soon… <br />
 Rezmytour, Business Village, Port Saeed, Deira Dubai, Dubai, United Arab Emirates.
               </p>
