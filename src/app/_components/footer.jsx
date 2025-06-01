@@ -52,8 +52,7 @@ const Footer = () => {
                 {/* <Link href={'tel:+911234567890 '} className='hover:text-primary-main transition-transform' >+911234567890</Link> */}
                 </li>
               <li>
-                Coming Soon…  <br />
-Rezmytour, Business Village, Port Saeed, Deira Dubai, Dubai, United Arab Emirates.
+                Port Saeed, Deira Dubai, Dubai, United Arab Emirates.
               </li>
             </ul>
           </div>
