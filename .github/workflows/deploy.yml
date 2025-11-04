@@ -35,6 +35,9 @@ jobs:
               env:
                   PAGES_BASE_PATH: ${{ env.PAGES_BASE_PATH }}
 
+            - name: List out folder (optional debug)
+              run: ls -al ./out
+
             # 6️⃣ Deploy to GitHub Pages
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v4
