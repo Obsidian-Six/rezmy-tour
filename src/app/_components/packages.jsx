@@ -1,12 +1,3 @@
-"use client";
-
-/* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
-import React, { useState } from "react";
-import { FaLocationDot } from "react-icons/fa6";
-import { useDispatch } from "react-redux";
-import { openModal } from "../redux/modelSlice/modelSlice";
-import Image from "next/image";
 import PackCard from "./card";
 
 export const pack = [
